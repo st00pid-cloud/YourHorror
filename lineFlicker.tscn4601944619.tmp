@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://ijd1bih8jfgd"]
+
+[ext_resource type="Script" uid="uid://c2kt7nkp0sfsx" path="res://line_2d.gd" id="1_2nqrk"]
+[ext_resource type="Script" uid="uid://bodv3g4yefcal" path="res://control.gd" id="1_jwy2y"]
+[ext_resource type="Shader" uid="uid://dr4txswgpxd4x" path="res://grunge.gdshader" id="2_jwy2y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hoxie"]
+shader = ExtResource("2_jwy2y")
+shader_parameter/bulge_amount = 0.2
+shader_parameter/aberration_amount = 0.005
+shader_parameter/scanline_count = 300.0
+shader_parameter/noise_amount = 0.05
+shader_parameter/noise_speed = 5.0
+
+[node name="mainMenu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+script = ExtResource("1_jwy2y")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 1151.0
+offset_bottom = 644.0
+color = Color(0, 0.041068032, 0, 1)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 70.0
+offset_right = 609.0
+offset_bottom = 582.0
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Line2D" type="Line2D" parent="Control/SubViewportContainer/SubViewport"]
+position = Vector2(-9.000002, -194.22217)
+scale = Vector2(1.0264151, 0.80452675)
+points = PackedVector2Array(0, 260, 510, 260)
+script = ExtResource("1_2nqrk")
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_hoxie")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -5.0
+offset_right = 7.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 268.0
+offset_right = 1058.0
+offset_bottom = 369.0
+
+[node name="Initiate Propagation" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "INITIATE PROPAGATION"
+
+[node name="Calibrate Transreceiver" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "CALIBRATE TRANSRECEIVER"
+
+[node name="Terminate Signal" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "TERMINATE SIGNAL"
