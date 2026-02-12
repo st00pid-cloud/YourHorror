@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcpl721qe1lkp"]
+[gd_scene load_steps=4 format=3 uid="uid://bcpl721qe1lkp"]
 
-[ext_resource type="PackedScene" uid="uid://bwecuhnhid8fl" path="res://playerAssets/FPS_Psx_Hands/FPS_Psx_Hаnds.fbx" id="1_d5ulr"]
+[ext_resource type="Script" uid="uid://qv3fxi6hpy6r" path="res://player.gd" id="1_2nim2"]
+[ext_resource type="PackedScene" uid="uid://kiwk32g16wts" path="res://playerAssets/new_edit.tscn" id="1_d5ulr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2nim2"]
 
 [node name="flesh" type="Node3D"]
 
 [node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_2nim2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 shape = SubResource("CapsuleShape3D_2nim2")
@@ -16,5 +18,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/HeadPivot"]
 current = true
+near = 0.01
 
 [node name="FPS_Psx_Hаnds" parent="Player/HeadPivot/Camera3D" instance=ExtResource("1_d5ulr")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="CenterContainer" type="CenterContainer" parent="Player/CanvasLayer"]
+offset_top = 11.0
+offset_right = 1153.0
+offset_bottom = 645.0
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="Player/CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(5.053729e-07, 0.3770681, 0.37783885, 1)
