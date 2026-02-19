@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bcpl721qe1lkp"]
 
-[ext_resource type="Script" uid="uid://qv3fxi6hpy6r" path="res://player.gd" id="1_2nim2"]
+[ext_resource type="Script" uid="uid://dx6wtdnr23bup" path="res://playerAssets/player.gd" id="1_1v327"]
 [ext_resource type="PackedScene" uid="uid://kiwk32g16wts" path="res://playerAssets/new_edit.tscn" id="1_d5ulr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2nim2"]
@@ -8,7 +8,7 @@
 [node name="flesh" type="Node3D"]
 
 [node name="Player" type="CharacterBody3D" parent="."]
-script = ExtResource("1_2nim2")
+script = ExtResource("1_1v327")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 shape = SubResource("CapsuleShape3D_2nim2")
