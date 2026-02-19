@@ -65,12 +65,12 @@ offset_bottom = 369.0
 
 [node name="Initiate Propagation" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "INITIATE PROPAGATION"
+text = "START GAME"
 
 [node name="Calibrate Transreceiver" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "CALIBRATE TRANSRECEIVER"
+text = "SETTINGS"
 
 [node name="Terminate Signal" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "TERMINATE SIGNAL"
+text = "EXIT"
