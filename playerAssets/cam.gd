@@ -1,4 +1,7 @@
 extends Node3D
+
+@export var default_height := 1.7 # Set this to your desired eye-level
+
 @export_group("Leaning")
 @export var lean_amount := 0.05
 @export var lean_smoothness := 7.0 
@@ -37,13 +40,16 @@ func _handle_head_bob(delta: float) -> void:
 	var velocity = get_parent().velocity
 	var horizontal_velocity = Vector2(velocity.x, velocity.z).length()
 	
+	# Determine the target Y position
+	var target_y = default_height
+	
 	if horizontal_velocity > 0.1:
 		_bob_timer += delta * horizontal_velocity * bob_freq
-		var bob_offset = sin(_bob_timer) * bob_amp
-		position.y = lerp(position.y, bob_offset, delta * smoothness)
-	else:
-		_bob_timer = 0
-		position.y = lerp(position.y, 0.0, delta * smoothness)
+		# Add the bob offset TO the default height
+		target_y += sin(_bob_timer) * bob_amp
+	
+	# Smoothly move to the target height
+	position.y = lerp(position.y, target_y, delta * smoothness)
 
 func _handle_lean(delta: float) -> void:
 	var target_z := 0.0

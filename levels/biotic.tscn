@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://dqbsffve6o6co"]
+[gd_scene load_steps=30 format=4 uid="uid://dqbsffve6o6co"]
 
 [ext_resource type="Texture2D" uid="uid://cv8f2xsfwfbuv" path="res://levels/texture.jpg" id="1_5gy70"]
 [ext_resource type="PackedScene" uid="uid://bcpl721qe1lkp" path="res://playerAssets/flesh.tscn" id="2_otbkq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bmjtms7igu6er" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Generator.png" id="4_gg1vk"]
 [ext_resource type="Texture2D" uid="uid://bwbwmt1m7iax2" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Wall.png" id="4_pg6fp"]
 [ext_resource type="Texture2D" uid="uid://ib46vxipyu7h" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Palet.png" id="5_f7dxi"]
+[ext_resource type="PackedScene" uid="uid://clp85rer3l6cw" path="res://worldAssets/Trees/Trees/Trees.fbx" id="9_mgp5f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n105"]
 size = Vector3(350, 1, 350)
@@ -214,6 +215,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7ehhi")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pg6fp"]
+size = Vector3(36.424683, 6.2161865, 13.831848)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mgp5f"]
+size = Vector3(36.248535, 6.4730835, 14.536438)
+
 [node name="Biotic" type="Node3D"]
 
 [node name="floor" type="StaticBody3D" parent="."]
@@ -243,7 +250,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.497635, -0.24443007, -31.0
 bone_idx = 2
 
 [node name="Building_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_3" index="0"]
-transform = Transform3D(-0.99732983, 0, 0.07302928, 0, 1, 0, -0.07302928, 0, -0.99732983, -54.61177, 0, 98.63979)
+transform = Transform3D(-0.99732983, 0, 0.07302928, 0, 1, 0, -0.07302928, 0, -0.99732983, -77.75258, 0, 113.78891)
 
 [node name="Building_4" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.92455, -0.014627218, -14.366824)
@@ -265,12 +272,17 @@ bone_idx = 6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 36)
 bone_idx = 7
 
+[node name="Building_8" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_8" index="0"]
+transform = Transform3D(-0.0007679899, 0, -0.9999997, 0, 1, 0, 0.9999997, 0, -0.0007679899, -12.185089, 0, 16.18471)
+
 [node name="Building_9" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 54)
 bone_idx = 8
 
 [node name="Building_9" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_9" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.019478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_9/Building_9" index="0"]
 
 [node name="Building_10" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67, 0, 76)
@@ -540,7 +552,7 @@ bone_name = "Wall"
 bone_idx = 68
 
 [node name="Wall" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Wall2"]
-transform = Transform3D(-0.0029147067, 0, -0.99999577, 0, 1, 0, 0.99999577, 0, -0.0029147067, -59.10905, 0, 51.661102)
+transform = Transform3D(-0.0029147067, 0, -0.99999577, 0, 1, 0, 0.99999577, 0, -0.0029147067, 76.44651, 0.56772137, 52.05621)
 mesh = SubResource("ArrayMesh_v33e0")
 skeleton = NodePath("")
 
@@ -611,6 +623,20 @@ mesh = SubResource("ArrayMesh_px8o8")
 skeleton = NodePath("")
 
 [node name="flesh" parent="." instance=ExtResource("2_otbkq")]
-transform = Transform3D(0.96635365, 0, 0.2572171, 0, 1, 0, -0.2572171, 0, 0.96635365, 25.660892, 4.2899275, 26.612204)
+transform = Transform3D(0.96635365, 0, 0.2572171, 0, 1, 0, -0.2572171, 0, 0.96635365, 25.660892, 1.0663958, 26.612204)
+
+[node name="collisions" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.5593055, 0, 0, 0, 1, 0, 5.142084, 14.955345)
+
+[node name="buil_A" type="CollisionShape3D" parent="collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.251109, 0.31805444, 3.7253113)
+shape = SubResource("BoxShape3D_pg6fp")
+
+[node name="buil_B" type="CollisionShape3D" parent="collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3896123, 11.360596, -0.7084491, 25.093746)
+shape = SubResource("BoxShape3D_mgp5f")
+
+[node name="Trees" parent="." instance=ExtResource("9_mgp5f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.16335, 0, 47.654606)
 
 [editable path="floor/IndustrialHorror_PS_like"]
