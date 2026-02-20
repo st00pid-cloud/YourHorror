@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bcpl721qe1lkp" path="res://playerAssets/flesh.tscn" id="2_otbkq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n105"]
-size = Vector3(75, 1, 75)
+size = Vector3(100, 1, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otbkq"]
 albedo_texture = ExtResource("1_5gy70")
@@ -20,7 +20,7 @@ shape = SubResource("BoxShape3D_8n105")
 debug_fill = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
-transform = Transform3D(75, 0, 0, 0, 1, 0, 0, 0, 75, 0, 0, 0)
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_otbkq")
 mesh = SubResource("BoxMesh_5gy70")
 
