@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u1djenweyfi2"
-path.s3tc="res://.godot/imported/Bags.png-a595ee6941eb0b1db6be3deaac3faa46.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bags.png-aa357b152595e9b2946b170531372365.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/textures/Bags.png"
-dest_files=["res://.godot/imported/Bags.png-a595ee6941eb0b1db6be3deaac3faa46.s3tc.ctex"]
+source_file="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Bags.png"
+dest_files=["res://.godot/imported/Bags.png-aa357b152595e9b2946b170531372365.s3tc.ctex"]
 
 [params]
 

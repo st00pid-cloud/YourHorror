@@ -1,11 +1,13 @@
-[gd_scene load_steps=19 format=4 uid="uid://dqbsffve6o6co"]
+[gd_scene load_steps=27 format=4 uid="uid://dqbsffve6o6co"]
 
 [ext_resource type="Texture2D" uid="uid://cv8f2xsfwfbuv" path="res://levels/texture.jpg" id="1_5gy70"]
 [ext_resource type="PackedScene" uid="uid://bcpl721qe1lkp" path="res://playerAssets/flesh.tscn" id="2_otbkq"]
-[ext_resource type="Texture2D" uid="uid://dawyb682ura1x" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/textures/Building_7.png" id="3_16nyj"]
+[ext_resource type="Texture2D" uid="uid://dawyb682ura1x" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Building_7.png" id="3_16nyj"]
+[ext_resource type="Texture2D" uid="uid://dvarfvwiqx0il" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Cooling_tower.png" id="3_f7dxi"]
 [ext_resource type="PackedScene" uid="uid://co5cnqdod8oat" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Models/IndustrialHorror_PS_like.fbx" id="3_so6oe"]
-[ext_resource type="Texture2D" uid="uid://bmjtms7igu6er" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/textures/Generator.png" id="4_gg1vk"]
-[ext_resource type="Texture2D" uid="uid://ib46vxipyu7h" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/textures/Palet.png" id="5_f7dxi"]
+[ext_resource type="Texture2D" uid="uid://bmjtms7igu6er" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Generator.png" id="4_gg1vk"]
+[ext_resource type="Texture2D" uid="uid://bwbwmt1m7iax2" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Wall.png" id="4_pg6fp"]
+[ext_resource type="Texture2D" uid="uid://ib46vxipyu7h" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Palet.png" id="5_f7dxi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n105"]
 size = Vector3(350, 1, 350)
@@ -14,6 +16,86 @@ size = Vector3(350, 1, 350)
 albedo_texture = ExtResource("1_5gy70")
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gy70"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8frx1"]
+resource_name = "Cooling_tower"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_f7dxi")
+emission_enabled = true
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_to16p"]
+_surfaces = [{
+"aabb": AABB(-2.257763, -0.11545382, -2.201156, 4.515526, 11.288906, 4.4023123),
+"format": 34359742465,
+"index_count": 756,
+"index_data": PackedByteArray("QAApAEEAQgBBACkAQQBDAEAAKwApAEAALwBDAEEAKQArAEQAQABFACsAKwBFAAsACwAJACsARAArAAkACwBFAAoACgAMAAsADQAMAAoARQBAACwALAAKAEUALABAAEMACQAIAEQACgBGAA0ARgAKACwADQBGAEcARwAQAA0ALABIAEYARwBGAEgAEABHAA8ADwARABAAEgARAA8ADwBHAEkASABJAEcADwBKABIABQASAEoASQAtAA8ASgAPAC0ASQBIAEsASwBIACwASwBMAEkALQBJAEwALAAoAEsAQwAoACwATQBLACgATABLAE0ATgAoAEMAKABOAE0AQwAvAE4ATAAuAC0ATQBOAE8ATwBOAC8ATQBQAEwATwA1AE0AUABNADUAMAAuAEwATABQADAALQAuAFEAUQAuADAAUQBSAC0ALQBSAEoAMABTAFEAVAAwAFAAUwAwAFQAUABVAFQANQBVAFAAVgBKAFIASgBWAAUAUgBXAFYAUgBRAFgAWABXAFIAWABRAFMAVgBXAA4ADgBXAFgABQBWAAIADgACAFYAAgADAAUAAwACAFkAWQABAAMAAgAOAFoAWgBZAAIAAAABAFkAWgAOABMAWAATAA4AWQBbAAAABAAAAFsAWQBaAFwAXABbAFkAWwAGAAQABwAEAAYAWwBcACoAKgAGAFsAXQBcAFoAKgBcAF0ABgBeAAcACAAHAF4AXgBEAAgAXwBeAAYARABeAF8ABgAqAF8AXwBgAEQARABgACkAKQBgAEIAYABfACcAJwBfACoAJwBCAGAAKgBhACcAXQBhACoAQgAnADEAMQAnAGEAYQBdAGIAYQBjADEAYgBjAGEAMQBkAEIAQgBkAGUAZQBBAEIAQQBlAC8AZQBkAGYAZgBkADEALwBlAGcAZgBnAGUAZwA3AC8ALwA3AE8AZwBmAGgAMQAzAGYAaABmADMAMQBjAGkAaQAzADEAaQBjAGIANwBnADkAaAA5AGcAagBPADcANQBPAGoAOQBrADcANwBrAGoAagA4ADUAVQA1ADgAbABqAGsAOABqAGwAawA5ADwAOABtAFUAawBuAGwAPABuAGsAbABvADgAbQA4AG8AcABsAG4AbwBsAHAAbgBxAHAAcQBuADwAIABwAHEAcAA9AG8APQBwACAAcQAhACAAIAAfAD0APQAfAB4AIQBxAD4APAA+AHEAPgAiACEAIwAiAD4AcgA+ADwAPgByACMAPABzAHIAcwA8ADkAOQBoAHMAIwByAHQAdAAkACMAJQAkAHQAdQB0AHIAcgBzAHUAdAA/ACUAPwB0AHUAJgAlAD8AcwBoAHYAdgB1AHMAMwB2AGgAdQB3AD8ANAB2ADMAdQB2ADQANAB3AHUAMwBpADQAPwB3ADoAOgB3ADQAPwB4ACYAOgB4AD8AHAAmAHgANAB5ADoANABpADIAMgB5ADQAYgAyAGkAOgB5AHoAegB5ADIAeAA6AHsAegB7ADoAeAB8ABwAewB8AHgAHAB8ABgAGAAaABwAfAB7ABcAFwAYAHwAewB6ABYAFgAXAHsAGgAYAH0AfQAYABcAfQAZABoAFwB+AH0AfgAXABYAGQB9AH8AfwB9AH4AfwAbABkAGwB/AIAAgAAdABsAHgAdAIAAgAB/AIEAfgCBAH8AgACCAB4AHgCCAD0AgQCDAIAAggCAAIMAPQCCADsAgwA7AIIAOwBvAD0AbwA7AG0AOwCDADYANgBtADsANgCDAIEAVQBtADYANgBUAFUAgQCEADYAhACBAH4AhQBUADYANgCEAIUAVACFAFMAfgCGAIQAhQCEAIYAFgCGAH4AhgCHAIUAhwCGABYAUwCFAIcAFgAVAIcAhwCIAFMAiACHABUAUwCIAFgAFQAWAHoAWACIABQAFQAUAIgAFAATAFgAegCJABUAMgCJAHoAiQAyAGIAFQCJAIoAYgCKAIkAigAUABUAiwCKAGIAFACKAIsAiwATABQAYgBdAIsAEwCLAFoAWgCLAF0A"),
+"lods": [1.066863, PackedByteArray("JwAoACkAKQAqACcAKgApAAYACAAHAAYABwAEAAYACQAIAAYAAgAGAAQAKgAGAAIABAAAAAIAAAABAAIAAgABAAMABgArAAkAKQArAAYACwAJACsAAgADAAUACwArAAoACgAMAAsADQAMAAoAKwApACwALAAKACsALAApACgADQAKAA8ADwAKACwADwAQAA0ADwACAAUADwARABAABQASAA8AEgARAA8ALAAtAA8AAgAPAC0ALQAsACgAAgAtAA4AAgAOACoAKgAOACcADgAtABMADgATACcAKAAuAC0ALQAuABMALgAoAC8ALwAoACcAEwAuADAALwAwAC4AMAAUABMAFAAnABMAFAAxACcAMQAvACcAFQAUADAAMgAxABQAFQAyABQAMgAzADEAMwAvADEAFgAyABUAMwAyADQAFgA0ADIANQAVADAAMAAvADUAFQA2ABYAFQA1ADYALwA3ADUAMwA3AC8ANQA4ADYAOAA1ADcANwAzADkANwA5ADgANAA5ADMAOgA0ABYAOgA5ADQAFgA2ABcAFgAXADoANgA4ADsANgA7ABcAPAA4ADkAPAA7ADgAOQA6ADwAFwA7ABgAGAA6ABcAOwA8AD0APQAYADsAPgA8ADoAPAA+AD0AOgAYAD8AOgA/AD4AGAAZABoAGAAaABwAGAAbABkAGwAYAD0AHAAmABgAPwAYACYAJgAlAD8AJQAkAD8APwAkACMAIwA+AD8AIwAiAD4APgAiACEAPgAhACAAIAA9AD4AIAAfAD0APQAfAB4AHgAdAD0APQAdABsA"), 8.836637, PackedByteArray("AAABAAIAAgABAAMABAAAAAIAAgADAAUAAgAGAAQABwAEAAYACAAHAAYACQAIAAYABgAKAAkACwAJAAoACgAMAAsADQAMAAoADgAKAAYADgAGAAIADQAKAA8ADwAKAA4ADwACAAUADwAQAA0AAgAPAA4ADwARABAABQASAA8AEgARAA8ADgAOAA8ADgAOABMADgATABMAEwATABQAFAAUABMAFAAUABUAFQAVABQAFQAVABYAFQAWABYAFgAWABcAFgAXABcAGAAXABcAFwAYABgAGAAZABoAGAAbABkAGAAaABwAGAAdABsAHgAdABgAGAAfAB4AIAAfABgAGAAhACAAGAAiACEAIwAiABgAGAAkACMAJQAkABgAJgAlABgAHAAmABgAGAAYACYA")],
+"name": "Cooling_tower",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 140,
+"vertex_data": PackedByteArray("6C8CwAZz7L17x3q/QC+0vwpz7L298eG/Q50Av/0flD693wzAQ50Avw1z7L283wzAL38QwABz7L0gfm4zPZ0APw1z7L283wzAMH8QwAAglD7ZgCIz6S8CwPpy7L16x3o/RS+0v/Zy7L288eE/Q50Av/Ny7L2+3wxASi+0PwMglD6/8eE/RZ0AP/Ny7L2+3wxASS+0P/Zy7L2+8eE/6S8CQPpy7L1zx3o/kcvXvv0flD51Xey/6S8CQP8flD5+x3q/L38QQABz7L1o1qA06C8CQAZz7L18x3q/Qy+0Pwpz7L298eG/kcvXvn882z9zXey/dhbJvsFwSUB4Qdy/o3m2vnxrkkBz3se/15GjvjsA10BTKbO/eBiavnzKDUHDyKi/xr+VvtsUMEEBBqS/gF6cPnXGMkFNRqu/hl6cvnXGMkFNRqu/fRFbP3XGMkEBWom/gRFbv3XGMkEDWom/EkieP3XGMkHjchi/4K2vP3XGMkF0yYW0E0ieP3XGMkHSchg/gxFbP3XGMkH4WYk/hl6cPnbGMkFHRqs/iV6cvnbGMkFHRqs/hRFbv3XGMkH4WYk/Ekiev3bGMkHVchg/4K2vv3XGMkGuQeq0D0iev3XGMkHmchi/KW/av3482z97YlI/SCmXP4E82z/QjL0/lcvXvgMglD55Xew/lHHyvwAglD5iftwyQ50AvwMglD6/3wxASCmXPwIglD7SjL0/J2/aP/8flD58YlK/J2/aP4A82z99YlK/ehbJPsJwSUB2Qdw/AYzLP8FwSUDIC0S/A4zLv8JwSUDHC0Q/6LS4v31rkkBr5jG/6rS4v31rkkBr5jE/1sS3vzwA10BOmYW07LS4P3xrkkBh5jE/7pGlPzwA10D7dx+/pXm2Pn1rkkBz3sc/85GlPzsA10Dxdx8/4pGjvjoA10BTKbM/4/qbv3zKDUFtOxa/7x+tP3zKDUFUfi60exiavnzKDUG/yKg/mZSXP9sUMEGP/hE/yb+VvtwUMEH7BaQ/2D2ov9sUMEFGnua0mMvXPgMglD55Xew/kcvXvoE82z94Xew/RSmXv4E82z/RjL0/mMvXPoE82z94Xew/Ri+0vwMglD6+8eE/Rp0APwMglD6/3wxA6i8CQAEglD51x3o/MH8QQAAglD7AVpc0K2/aPwEglD51YlI/lHHyPwAglD49Z3c0RC+0P/0flD6/8eG/K2/aP3482z90YlI/lHHyP4A82z++lzQ0B4zLP8JwSUDAC0Q/39uMP8JwSUCgobA/YKR/P3xrkkBNSKA/hOvhP8JwSUBgUdozQymXP3882z/RjL2/QymXP/4flD7SjL2/29uMP8JwSUChobC/7LS4P3xrkkBr5jG/TQLNP31rkkBQlRwzPZ0AP/0flD693wzAisvXPv0flD51Xey/isvXPn882z92Xey/QS+0v/0flD6/8eG/QSmXv/4flD7SjL2/6S8CwP8flD58x3q/J2/av/8flD55YlK/J2/av3482z96YlK/6i8CwAEglD58x3o/KW/avwEglD58YlI/RSmXvwIglD7RjL0/lHHyv4A82z/O/hyzAYzLv8FwSUDKC0S/hevhv8FwSUDG+8yz39uMv8JwSUCgobA/ehbJvsJwSUB2Qdw/YKR/v3trkkBOSKA/pXm2vnxrkkBz3sc/+SdlvzoA10AgrY8/SwLNv3xrkkCfG7q09ydlPzoA10AgrY8/3pGjPjsA10BTKbM/FeJXP3vKDUG2Woc/18S3PzwA10A+XIqzfhiaPnzKDUG/yKg/6fqbP3vKDUFdOxY/OctRP9oUMEFWiYM/xr+VPtwUMEH7BaQ/O8tRv9oUMEFWiYM/FeJXv3vKDUG2Woc/l5SXv9wUMEGS/hE/5fqbv3zKDUFgOxY/8JGlvzwA10D2dx8/8R+tv3zKDUFoQbq0lZSXv9sUMEGk/hG/75GlvzsA10D7dx+/9CdlvzsA10AlrY+/EuJXv3zKDUG8Woe/N8tRv9sUMEFhiYO/wL+VPtsUMEEBBqS/eBiaPnzKDUHFyKi/MstRP9sUMEFfiYO/l5SXP9sUMEGg/hG/E+JXP3zKDUG8Woe/2D2oP9sUMEH0Zoa05fqbP3zKDUFrOxa/8idlPzsA10AlrY+/WaR/P31rkkBQSKC/15GjPjsA10BTKbO/n3m2PnxrkkBz3se/dBbJPsJwSUB4Qdy/WaR/v3xrkkBSSKC/29uMv8JwSUChobC/QSmXv3882z/TjL2/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qi8lb"]
+resource_name = "Cooling_tower"
+_surfaces = [{
+"aabb": AABB(-2.257763, -0.11545382, -2.201156, 4.515526, 11.288906, 4.4023123),
+"attribute_data": PackedByteArray("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"),
+"format": 34359742487,
+"index_count": 756,
+"index_data": PackedByteArray("dgBGAHcAeAB3AEYAdwB5AHYARgB6AHgARwB2AHkARAB4AHoAeQBFAEcAegB7AEQARwBFAHwARAB7AEgAfAB9AEcASAB+AEQAfwB9AHwAgAB+AEgAfACBAH8ASACCAIAASQB/AIEAgACCAIMAgQBKAEkAgwCEAIAAFQCEAIMAgwAXABUASQBKAIUAhQCGAEkAhgCFAIcAhwCIAIYAFACIAIcAhwAWABQAiQCKAAAABAAAAIoAAAABAIkAiQABAAMAAwACAIkAigAFAAQABgAEAAUABQCLAAYABwAGAIsAiwCMAAcACAAHAIwAjABLAAgACgAIAEsASwCNAAoACgCNAAkACQALAAoADAALAAkACQCOAAwADACOAI8AjwAOAAwADgCPAA0ADQAPAA4AEAAPAA0ADQCQABAAEQAQAJAAkACRABEAEQCRABIAEgATABEAkgCTAJQAlQCTAJIAlACWAJIAkgBOAJUAlgCUAEwATwCVAE4ATABNAJYATgCXAE8AmABNAEwAmQBPAJcATACaAJgAlwCbAJkAmACaAJwAnQCZAJsAnACeAJgAmwCfAJ0AUQCeAJwAoACdAJ8AnAChAFEAnwCiAKAAOACgAKIAogA3ADgAUQChAFAAUACjAFEAowBQAKQApAClAKMApQCkADUANQA2AKUAGgCmAKcApwAZABoAqACnAKYApgBSAKgAqABSAKkAqQCqAKgAUwCqAKkAqQBUAFMAUwBUAKsAqwCsAFMArQCsAKsAqwCuAK0AVQCtAK4ArgBWAFUAVQBWAK8ArwCwAFUAsQCwAK8ArwBXALEAsgCxAFcAVwCzALIAsgCzALQAtABYALIAtQBYALQAtAC2ALUAtQC2ALcAtwC4ALUAuAC3ABsAGwAYALgAHgAcALkAuQAdAB4AHQC5ALoAugAfAB0AHwC6ALsAuwAgAB8AIQAgALsAuwC8ACEAIQC8AFkAWQAiACEAIwAiAFkAWQC9ACMAIwC9AL4AvgAkACMAJAC+AFoAWgAlACQAJgAlAFoAWgC/ACYAJgC/AMAAwAAnACYAKAAnAMAAwABbACgAKQAoAFsAWwDBACkAKwApAMEAwQDCACsAKwDCACoAKgAsACsAXwDDAGEAXQDDAF8AYQDEAF8AXwDFAF0AxgDEAGEAXQDFAMcAYQDIAMYAxgDIADAAMAAuAMYAxwDJAF0AygDJAMcAxwBeAMoAXADKAF4AXgDLAFwAXADLAMwAzADNAFwAYgDNAMwAzABgAGIAzgBiAGAAYADPAM4AzgDPAGMAYwDQAM4A0QDQAGMAYwDSANEA0QDSANMA0wDUANEA1ADTAC8ALwAtANQA1QBmAGQAZABmANYAZADXANUA1gDYAGQA1QDXANkA2gDYANYA2QDbANUA1gDcANoA2wDZAGUA2gDcAN0AZQDeANsA3QDfANoAOQDfAN0A3QA7ADkA3gBlAOAA4ABnAN4AZwDgAOEA4QDiAGcA4wDiAOEA4QDkAOMA4wDkAGkAaQBoAOMA5QBoAGkAaQDmAOUA5wDlAOYA5gDoAOcA5wDoADoAOgA8AOcA6QBuAOoA6gBvAOkA6wDqAG4AcADpAG8AbgDsAOsAbwDtAHAA6wDsAO4AcADtAO8A7gDwAOsA7wDxAHAAbQDwAO4A8QDvAPIA7gBsAG0A8gDzAPEAMQDzAPIA8gAzADEA9ABtAGwAbAD1APQA9AD1APYA9gD3APQA9wD2AGsAawD4APcAagD4AGsAawD5AGoAagD5APoA+gD7AGoA+wD6ADIAMgA0APsA/AD9AP4APwD+AP0A/gD/APwA/QByAD8AcQD8AP8AAAE/AHIA/wBBAHEAcgABAQABcQBBAAIBAwEAAQEBAgEEAXEAAQEFAQMBAwEFAT4APgBAAAMBBAECAXMAcwB0AAQBdABzAAYBBgEHAXQACAEHAQYBBgEJAQgBCAEJAUIAQgB1AAgBdQBCAAoBCgELAXUACwEKAQwBDAENAQsBDQEMAUMAQwA9AA0B"),
+"lods": [1.066863, PackedByteArray("RABFAEYARwBGAEUARgBIAEQASAAXAEQAFwAVAEQASQBHAEUARQBKAEkASQBKABYAFABJABYAAAABAAIAAgABAAMABAAAAAIAAgAFAAQABgAEAAUABwAGAAUACAAHAAUABQBLAAgACgAIAEsACgBLAAkACQALAAoADAALAAkADAAJAA0ADQAOAAwADQAPAA4AEAAPAA0AEQAQAA0ADQASABEAEgATABEATABNAE4ATwBMAE4ATgA3AE8AOABPADcATQBMAFAAUABRAE0AUAA2AFEANgBQADUAGgBSABkAUgBTABkAUgBUAFMAVABVAFMAVABWAFUAVQBWAFcAWABVAFcAVwAbAFgAGwAYAFgAHAAdAB4AHAAfAB0AHwAcAFkAWQAgAB8AIQAgAFkAWQAiACEAIwAiAFkAIwBZAFoAWgAkACMAWgAlACQAJgAlAFoAJgBaAFsAWwAnACYAKAAnAFsAKQAoAFsAWwAqACkAKwApACoAKgAsACsAXABdAF4AXwBeAF0AXABeAGAAXQBhAF8ALgBfAGEALgBhADAAYABiAFwAYgBgAGMALQBiAGMALQBjAC8AZABlAGYAOQBkAGYAOQBmADsAZQBnAGYAaABnAGUAZQBpAGgAPABoAGkAaQA6ADwAagBrADIAMgA0AGoAagBsAGsAbABqAG0AbQBuAGwAbQBvAG4AcABuAG8AcABvADMAMQBwADMAcQByAD8AQAA/AHIAQAByAD4APwBBAHEAcQBBAHMAcwB0AHEAdABzAEIAdQB0AEIAdQBCAEMAQwA9AHUA"), 8.836637, PackedByteArray("AAABAAIAAgABAAMABAAAAAIAAgAFAAQABgAEAAUABwAGAAUACAAHAAUABQAJAAgACgAIAAkACQALAAoADAALAAkADAAJAA0ADQAOAAwADQAPAA4AEAAPAA0AEQAQAA0ADQASABEAEgATABEAFAAVABYAFAAXABUAGAAZABoAGgAbABgAHAAdAB4AHAAfAB0AHAAgAB8AIQAgABwAHAAiACEAIwAiABwAHAAkACMAHAAlACQAJgAlABwAHAAnACYAKAAnABwAKQAoABwAHAAqACkAKwApACoAKgAsACsALQAuAC8ALQAwAC4AMQAyADMAMgA0ADMANQA2ADcANwA4ADUAOQA6ADsAPAA7ADoAPQA+AD8AQAA/AD4APwBBAD0APQBBAEIAPQBCAEMA")],
+"material": SubResource("StandardMaterial3D_8frx1"),
+"name": "Cooling_tower",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 270,
+"vertex_data": PackedByteArray("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gwn66XYZ2r7wBVDp/hiywPAFUOnbGEu/gwn66dMZI8HwBVDp2xhLv/AFUOn+GLLA9QLC6FQYp7/1AsLoXBhXwPUCwuhcGFfA3wGP6CQYNsDfAY/oIRjHv/UCwuhUGKe/CwoT6vQZNMELChPqjBnJvpgEEOmzGInAmAQQ6Z8Ydb//f///min/v/9///8AAP+//3///wAAzJT/f///AAD/v/9//////5qj/3////9//7//f///min/v2YsI4Saqf+/Cbfvg/7/mqM2aP9/Nej/v8m4/3///5qjAAD/f/9//7///2RWAADMlNv7ZawAAMyUNmj/fzXo/7/DaPWCNej/v49o34E16P+/QdWugf7/Met3/IaDAAD+/6kCZqtkVv+/PQI8gv9//7+ZCGivZFb/v7wvFYmaqf+/aC+YiJqp/7/qlQuK//8atASWgon//xq0ltCYiP7/Mevo9ryvAADMlKTEs2VkVv+/iG1cYwAAGrTXIChf/v8AgASWgon//+PLaC+YiJqp/79Qae+FNej/vwsHC4f/f/+/x9JZhf7/MeuZCGivZFb/v5bQmIj+/zHrpPo3rQAAzJS8LxWJmqn/v+qVC4r//+PLZiwjhJqp/78Jt++D/v+ao9v7ZawAAMyU6Pa8rwAAzJSpAmarZFb/vwsHC4f/f/+/UGnvhTXo/7/DaPWCNej/v8fSWYX+/zHrd/yGgwAA/v+k+jetAADMlP9//////5qj/3///wAAzJT/f///Nej/v/9///816P+//3////9//7/Il/9///8atBFpmIQ16P+/9UjvgzXH/7/tlpiE//8atDVH/381x/+/min/f5qp/7+Y0yOE//8x62TW/3///8yUdwV2hf9//7////9/AAD+/yMEZaxkVv+/h/p2hQAA/v8AAGRWZFb/vwAAyTjJOP+/8AP0yMk4/78O/PTIAACao///NccAAJqjZvsQ6QAA48v//zXoAADjywAAyTjJOP+/AABkVmRW/7+aKf9/mqn/vzVH/381x/+/yJf/f///48tk1v9////MlP7//38AAACA/v/JOAAAmqP+/8kXAADjyxO4mYH+/5qjqbeHgv7/mqM7l/WC/v8atJjUqIL+/zHrb5ffgf7/GrTB/TyCAAAAgOtHmYE1x/+/Vf1mqwAAzJRVSIeCNcf/v0/+vaoAADHrZiuogpqp/793/VTIAACao70qroGaqf+/Zf7rxwAAZNwJ/cLoAADjy4cDhoP/f/+/H/6P6AAA48uvAb2qZFb/v4cCVMjJOP+/mQHrx8k4/78xCNjKyTj/v6kIDMvJOP+/Fgm8r2RW/785CzmL/3//v9gL2Iv/f/+/2EoxiDXH/78NS6iINcf/vxRqC4o16P+/+mmCiTXo/78mtTGI/v+ao/G0qIj//5qjQtAVif//Mesm9NiLAAAAgMX0OYsAAACAZfdorwAAzJRV9wzLAABk3M332MoAAJqje/b66QAAGrTz9RPqAAAatFvjdhI16P+/wuaXLTXH/7+z5aVEmqn/vyffKF//f/+/lq3CZsk4/792klxjyRf/v2hSwmYAAGTcWjuzZQAAMetLGqVE/v8x6zwZly3+/2TcOQs5i/9//79aBTetZFb/vzctWYWaqf+/GAV3yck4/794SReFNcf/vzEI2MrJOP+/2EoxiDXH/7/6aYKJNej/v66W74X//+PLhrYXhf//mqMmtTGI/v+ao8X0OYsAAP7/8/gLhwAA/v9l92ivAAAx68332MoAAJqj5vp3yQAAmqMO+lDpAAAatHv2+ukAABq09UjvgzXH/793BXaF/3//vw1LqIg1x/+/2AvYi/9//78UaguKNej/vxYJvK9kVv+/EWmYhDXo/78jBGWsZFb/v/AD9MjJOP+/7ZaYhP//GrSpCAzLyTj/v/G0qIj//5qjQtAVif//zJSY0yOE/v/MlIf6doUAAP7/JvTYiwAAAIAO/PTIAACao1X3DMsAAGTcZvsQ6QAAGrTz9RPqAAAatPP4C4cAAP7/mNSogv7/Meupt4eC/v+ao4a2F4X//2TcVf1mqwAAzJSulu+F//8atHf9VMgAAJqjO5f1gv7/GrTm+nfJAACaown9wugAAOPLDvpQ6QAA48tVSIeCNcf/v3hJF4U1x/+/Ny1ZhZqp/79mK6iCmqn/v4cDhoP/f/+/WgU3rWRW/78YBXfJyTj/v4cCVMjJOP+//3//////zJT/f///AAAAgP9///8AAACA/3//////zJT/f///AACao/9///8AAJqj/3//////GrT/f///AAAatP9//////xq0/3///wAAGrT/f///Ncf/v/9///81x/+//3///5qp/7//f///mqn/v/9///9kVv+//3///2RW/7//f///yTj/v/9////JOP+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_to16p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2wkv"]
+resource_name = "Wall"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("4_pg6fp")
+emission_enabled = true
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r0awv"]
+_surfaces = [{
+"aabb": AABB(-2.0148826, -0.08605716, -0.23111312, 4.029765, 2.9944706, 0.4622266),
+"format": 34359742465,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAQAEAAMAAwAEAAUABgAFAAAABQAGAAMAAgAHAAAAAAAHAAYABwACAAgACAAJAAcABwAJAAoACgAJAAgABgAHAAoACwAIAAIACwACAAMACAALAAoAAwAMAAsACgALAAwADQADAAYAAwANAAwADAAOAAoACgAOAAYADgAMAA0ABgAPAA0ADQAPAA4ADgAPAAYA"),
+"name": "Wall",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("1fMAwGw+sL3VKSm+1fMAQFQ+sL3hKSm+1PMAQJScMUBLKSm+1PMAQI6cMUBIcSc+1fMAQKQ+sL3Qbyc+1fMAwLw+sL3cbyc+1vMAwI6cMUBUcSc+1vMAwJScMUCKKSm+1PMAQJycMUBhqGy+1vMAwJycMUDrqGy+1vMAwHIjOkCgqGy+1PMAQHIjOkBhqGy+1PMAQG0jOkAWqGw+1PMAQJecMUAWqGw+1vMAwG0jOkC4qGw+1vMAwJecMUADqWw+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v33e0"]
+resource_name = "Wall"
+_surfaces = [{
+"aabb": AABB(-2.0148826, -0.08605716, -0.23111312, 4.029765, 2.9944706, 0.4622266),
+"attribute_data": PackedByteArray("AAADOkPffz9uTxw/Q99/P25PHD8TeAw/9/8COhJ4DD9uTxw/WKOxPW5PHD9glYU9+v8COmCVhT32/wI6WKOxPW5PHD9QjJM9+f8COlCMkz32/wI6WKOxPW5PHD9Yo7E9bk8cP1CMkz1uTxw/WKOxPfb/AjpYo7E9+f8COlCMkz36/wI6YJWFPW5PHD9glYU9bk8cP1ijsT32/wI6WKOxPQAAAzoA9AI6bk8cPwD0AjpuTxw/YJWFPfr/AjpglYU9bk8cPxN4DD9uTxw/Q99/PwAAAzpD338/9/8COhJ4DD8QuEQ/pHDdPhW4RD9wIuo+rH9BP3wi6j6ssi4/nHDdPqx/QT98Iuo+ldYxP3Ii6j6V1jE/ciLqPqmyLj9oIuo+rLIuP5xw3T6sf0E/fCLqPpp/QT+NYX0/kdYxP4phfT+V1jE/ciLqPqx/QT94Iuo+CrhEP6Bw3T6wsi4/mHDdPpnWMT9wIuo+sLIuP5hw3T6wsi4/ZCLqPpnWMT9wIuo+rH9BP3gi6j4KuEQ/cCLqPgq4RD+gcN0+rH9BP3gi6j6Z1jE/cCLqPpHWMT+IYX0/mn9BP4phfT8="),
+"format": 34359742487,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHwAcACAAIAAhAB8AIgAjACQAJQAmACcAJwAoACUAKQAqACsAKwAsACkALQAuAC8AMAAxADIAMwA0ADUANQA2ADMA"),
+"material": SubResource("StandardMaterial3D_v2wkv"),
+"name": "Wall",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 55,
+"vertex_data": PackedByteArray("1fMAwGw+sL3VKSm+1fMAQFQ+sL3hKSm+1PMAQJScMUBLKSm+1vMAwJScMUCKKSm+1PMAQJycMUBhqGy+1PMAQHIjOkBhqGy+1vMAwHIjOkCgqGy+1vMAwJycMUDrqGy+1PMAQJycMUBhqGy+1vMAwJycMUDrqGy+1vMAwJScMUCKKSm+1PMAQJScMUBLKSm+1PMAQJecMUAWqGw+1PMAQI6cMUBIcSc+1vMAwI6cMUBUcSc+1vMAwJecMUADqWw+1vMAwG0jOkC4qGw+1PMAQG0jOkAWqGw+1PMAQJecMUAWqGw+1vMAwJecMUADqWw+1vMAwHIjOkCgqGy+1PMAQHIjOkBhqGy+1PMAQG0jOkAWqGw+1vMAwG0jOkC4qGw+1PMAQI6cMUBIcSc+1fMAQKQ+sL3Qbyc+1fMAwLw+sL3cbyc+1vMAwI6cMUBUcSc+1vMAwG0jOkC4qGw+1vMAwJecMUADqWw+1vMAwI6cMUBUcSc+1vMAwHIjOkCgqGy+1vMAwI6cMUBUcSc+1vMAwJScMUCKKSm+1vMAwJScMUCKKSm+1vMAwJycMUDrqGy+1vMAwHIjOkCgqGy+1vMAwI6cMUBUcSc+1fMAwLw+sL3cbyc+1fMAwGw+sL3VKSm+1vMAwJScMUCKKSm+1PMAQI6cMUBIcSc+1PMAQG0jOkAWqGw+1PMAQHIjOkBhqGy+1PMAQJScMUBLKSm+1PMAQHIjOkBhqGy+1PMAQJycMUBhqGy+1PMAQJScMUBLKSm+1PMAQI6cMUBIcSc+1PMAQJecMUAWqGw+1PMAQG0jOkAWqGw+1PMAQI6cMUBIcSc+1PMAQJScMUBLKSm+1fMAQFQ+sL3hKSm+1fMAQKQ+sL3Qbyc+/v/+//7//z/+//7//v//P6/VAAD+//8//v+v1a/V/z/+//7//v//P/7//v/+//8//v/+//7//z/+//7//v//PwCAAAD+//8/AIAAAP7//z9PqgAA/v//P69VTyqv1SdV/38BAP///7//f1Qq////v1OqVCqq1SnV/38BAP///7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//v////+//3/+//7//7//f/7//v//v/9//v////+/q1X/f6rV/7//f/9/////v/9//3////+//3+rVf///78AAP9//3//vwAA/3//f/+/VCr/f1Oq/78AAP9//3//vxUz46Hekta7Tyr/f0+q/78YIvaydW0ZxAAA/3//f/+/AAD/f/9//78AAFOqq1X/vwAA/3//f/+/AAD/f/9//79PKq9V/3//v/7/U6pTqv8/////f/9//z////9//3//P+bd9rKJkuU7////f/9//z////9//3//P/7/T6pPqv8/6czjoSBtJ0T///9//3//P////3//f/8/qtWrVf9//z+v1f9/r1X/P/7//3//f/8//v//f/9//z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r0awv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23v84"]
 resource_name = "Building_11"
@@ -141,7 +223,7 @@ shape = SubResource("BoxShape3D_8n105")
 debug_fill = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
-transform = Transform3D(350, 0, 0, 0, 1, 0, 0, 0, 350, 0, 0, 0)
+transform = Transform3D(350, 0, 0, 0, 1, 0, 0, 0, 350, 0.08889389, -3.8146973e-06, 0.1368866)
 material_override = SubResource("StandardMaterial3D_otbkq")
 mesh = SubResource("BoxMesh_5gy70")
 
@@ -159,6 +241,9 @@ bone_idx = 1
 [node name="Building_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.497635, -0.24443007, -31.023964)
 bone_idx = 2
+
+[node name="Building_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_3" index="0"]
+transform = Transform3D(-0.99732983, 0, 0.07302928, 0, 1, 0, -0.07302928, 0, -0.99732983, -54.61177, 0, 98.63979)
 
 [node name="Building_4" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.92455, -0.014627218, -14.366824)
@@ -184,298 +269,348 @@ bone_idx = 7
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 54)
 bone_idx = 8
 
+[node name="Building_9" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_9" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.019478)
+
 [node name="Building_10" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67, 0, 76)
 bone_idx = 9
+
+[node name="Building_10" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_10" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.396774)
 
 [node name="Building_11" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 97)
 bone_idx = 10
 
+[node name="Building_11" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_11" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.830544, 0, 10.398029)
+
 [node name="Building_12" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.64744, 0, 113.461716)
 bone_idx = 11
+
+[node name="Building_12" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_12" index="0"]
+transform = Transform3D(0.0040840553, 0, -0.99999166, 0, 1, 0, 0.99999166, 0, 0.0040840553, -30.293415, 0, 10.801466)
 
 [node name="Cooling_tower" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74, 0.033085823, 126.919754)
 bone_idx = 12
 
-[node name="Building_13" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="13"]
+[node name="Cooling_tower" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Cooling_tower" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.025705, 0.40920258, -11.686546)
+
+[node name="Cooling_tower2" type="BoneAttachment3D" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74, 0.033085823, 126.919754)
+bone_name = "Cooling_tower"
+bone_idx = 12
+
+[node name="Cooling_tower" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Cooling_tower2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.296011, 0.40920258, -11.686546)
+mesh = SubResource("ArrayMesh_qi8lb")
+skeleton = NodePath("")
+
+[node name="Building_13" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0.02004385, -2)
 bone_idx = 13
 
-[node name="Barrel_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="14"]
+[node name="Barrel_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="15"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.140982, 0.008084536, -69.451164)
 bone_idx = 14
 
-[node name="Barrel_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="15"]
+[node name="Barrel_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="16"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.140982, 0.008084536, -69.451164)
 bone_idx = 15
 
-[node name="Barrel_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="16"]
+[node name="Barrel_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="17"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.140984, 0.008084536, -69.451164)
 bone_idx = 16
 
-[node name="Box_wide_wood" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="17"]
+[node name="Box_wide_wood" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="18"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9148, 0.017778635, -72.01615)
 bone_idx = 17
 
-[node name="Box_wood" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="18"]
+[node name="Box_wood" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="19"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.009228, 0.002250195, -72.06786)
 bone_idx = 18
 
-[node name="Cargo_1_close" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="19"]
+[node name="Cargo_1_close" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="20"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.229565, -0.0011518002, -80.03676)
 bone_idx = 19
 
-[node name="Cargo_1_open" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="20"]
+[node name="Cargo_1_open" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="21"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.229565, -0.03633499, -75.80651)
 bone_idx = 20
 
-[node name="Cargo_2_empty" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="21"]
+[node name="Cargo_2_empty" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.020912, 0.010494769, -67.08004)
 bone_idx = 21
 
-[node name="Cargo_2_full" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="22"]
+[node name="Cargo_2_full" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="23"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.020912, 0.010494769, -64.97106)
 bone_idx = 22
 
-[node name="Liquid_reservoir_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="23"]
+[node name="Liquid_reservoir_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="24"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, -0.0060157776, -56)
 bone_idx = 23
 
-[node name="Liquid_reservoir_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="24"]
+[node name="Liquid_reservoir_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="25"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -0.0022156239, -56)
 bone_idx = 24
 
-[node name="Bridges_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="25"]
+[node name="Bridges_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="26"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5388947, 4.750374, -59.70133)
 bone_idx = 25
 
-[node name="Bridges_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="26"]
+[node name="Bridges_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="27"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5388947, 4.8605366, -64.9829)
 bone_idx = 26
 
-[node name="Bridges_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="27"]
+[node name="Bridges_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="28"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4456496, 0.23366511, -70.56032)
 bone_idx = 27
 
-[node name="Bridges_end" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="28"]
+[node name="Bridges_end" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="29"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.412236, 5.079356, -74.356125)
 bone_idx = 28
 
-[node name="Bridges_stairs_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="29"]
+[node name="Bridges_stairs_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="30"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08115482, 0.048018813, -62.8578)
 bone_idx = 29
 
-[node name="Bridges_stairs_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="30"]
+[node name="Bridges_stairs_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="31"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8179023, 0.09836841, -62.74133)
 bone_idx = 30
 
-[node name="Bridges_turn" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="31"]
+[node name="Bridges_turn" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="32"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7898397, 5.006735, -77.57129)
 bone_idx = 31
 
-[node name="Bridges_support_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="32"]
+[node name="Bridges_support_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="33"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9269242, -0.0443058, -69.05805)
 bone_idx = 32
 
-[node name="Bridges_support_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="33"]
+[node name="Bridges_support_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="34"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.888968, -0.044306755, -70.52643)
 bone_idx = 33
 
-[node name="Bridges_support_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="34"]
+[node name="Bridges_support_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="35"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9269233, -0.0443058, -67.663025)
 bone_idx = 34
 
-[node name="Pipes_arch" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="35"]
+[node name="Pipes_arch" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="36"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.831116, 0.013581276, -32.98812)
 bone_idx = 35
 
-[node name="Pipes_horizontal_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="36"]
+[node name="Pipes_horizontal_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="37"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.713745, -0.013436317, -37.416996)
 bone_idx = 36
 
-[node name="Pipes_horizontal_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="37"]
+[node name="Pipes_horizontal_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="38"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.376062, 0.0338583, -39.045483)
 bone_idx = 37
 
-[node name="Pipes_horizontal_turn_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="38"]
+[node name="Pipes_horizontal_turn_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="39"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.629528, 4.624491, -43.724876)
 bone_idx = 38
 
-[node name="Pipes_horizontal_turn_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="39"]
+[node name="Pipes_horizontal_turn_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="40"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.988726, 4.624606, -28.573431)
 bone_idx = 39
 
-[node name="Pipes_out_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="40"]
+[node name="Pipes_out_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="41"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.521645, 4.007564, -34.645782)
 bone_idx = 40
 
-[node name="Pipes_out_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="41"]
+[node name="Pipes_out_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="42"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.437096, 2.9818778, -35.64271)
 bone_idx = 41
 
-[node name="Pipes_support" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="42"]
+[node name="Pipes_support" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="43"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.285955, -0.01713562, -38.21724)
 bone_idx = 42
 
-[node name="Pipes_vertical_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="43"]
+[node name="Pipes_vertical_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="44"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.105797, 2.29987, -41.386963)
 bone_idx = 43
 
-[node name="Pipes_vertical_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="44"]
+[node name="Pipes_vertical_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="45"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.105797, 5.911356, -41.386963)
 bone_idx = 44
 
-[node name="Pipes_vertical_turn" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="45"]
+[node name="Pipes_vertical_turn" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="46"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.038172, 7.671337, -41.45183)
 bone_idx = 45
 
-[node name="Bags_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="46"]
+[node name="Bags_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="47"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.872387, 0.046727657, -47.916183)
 bone_idx = 46
 
-[node name="Bags_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="47"]
+[node name="Bags_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="48"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.872387, 0.046727657, -47.916183)
 bone_idx = 47
 
-[node name="Generator" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="48"]
+[node name="Generator" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="49"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.003324449, -40)
 bone_idx = 48
 
-[node name="Metal_cabinet_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="49"]
+[node name="Metal_cabinet_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="50"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.010856509, -42)
 bone_idx = 49
 
-[node name="Metal_cabinet_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="50"]
+[node name="Metal_cabinet_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="51"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.007167816, -42)
 bone_idx = 50
 
-[node name="Palet_single" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="51"]
+[node name="Palet_single" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="52"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.012979, 0.0019870847, -45)
 bone_idx = 51
 
-[node name="Palet_stack" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="52"]
+[node name="Palet_stack" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="53"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.015698, 0.0054847, -45.023956)
 bone_idx = 52
 
-[node name="Ventilation_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="53"]
+[node name="Ventilation_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="54"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.0013910532, -37)
 bone_idx = 53
 
-[node name="Ventilation_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="54"]
+[node name="Ventilation_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="55"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.037506, 1.0119398, -37.0147)
 bone_idx = 54
 
-[node name="Ventilation_2_blades" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="55"]
+[node name="Ventilation_2_blades" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="56"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.037507, 1.0119399, -36.99956)
 bone_idx = 55
 
-[node name="Ventilation_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="56"]
+[node name="Ventilation_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="57"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.037506, 1.0119398, -37.003967)
 bone_idx = 56
 
-[node name="Ventilation_3_blades" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="57"]
+[node name="Ventilation_3_blades" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="58"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.037506, 1.0119399, -37.003967)
 bone_idx = 57
 
-[node name="Alphalt_Floor" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="58"]
+[node name="Alphalt_Floor" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="59"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, 42)
 bone_idx = 58
 
-[node name="Concrete_stairs" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="59"]
+[node name="Concrete_stairs" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="60"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.29876, 0.019178271, 42.852154)
 bone_idx = 59
 
-[node name="Concrete_miniwall_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="60"]
+[node name="Concrete_miniwall_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="61"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.637589, 0.017599225, 39.207687)
 bone_idx = 60
 
-[node name="Concrete_miniwall_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="61"]
+[node name="Concrete_miniwall_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="62"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.527237, 0.017599225, 41.70972)
 bone_idx = 61
 
-[node name="Road_curved" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="62"]
+[node name="Road_curved" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="63"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.773384, 0.90818423, -14.68683)
 bone_idx = 62
 
-[node name="Road_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="63"]
+[node name="Road_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="64"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.357513, 0.90818024, -14.614291)
 bone_idx = 63
 
-[node name="Road_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="64"]
+[node name="Road_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="65"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.357513, 0.90817887, 1.3099002)
 bone_idx = 64
 
-[node name="Road_turn_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="65"]
+[node name="Road_turn_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="66"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.282925, 0.9081805, 1.4131508)
 bone_idx = 65
 
-[node name="Road_turn_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="66"]
+[node name="Road_turn_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="67"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.5688, 0.90818083, 18.274834)
 bone_idx = 66
 
-[node name="Road_turn_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="67"]
+[node name="Road_turn_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="68"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.568802, 0.90818083, 17.945719)
 bone_idx = 67
 
-[node name="Wall" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="68"]
+[node name="Wall" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="69"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.940952, 0.031353354, 35.028202)
 bone_idx = 68
 
-[node name="Wall_column" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="69"]
+[node name="Wall2" type="BoneAttachment3D" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="70"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.940952, 0.031353354, 35.028202)
+bone_name = "Wall"
+bone_idx = 68
+
+[node name="Wall" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Wall2"]
+transform = Transform3D(-0.0029147067, 0, -0.99999577, 0, 1, 0, 0.99999577, 0, -0.0029147067, -59.10905, 0, 51.661102)
+mesh = SubResource("ArrayMesh_v33e0")
+skeleton = NodePath("")
+
+[node name="Wall_column" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="71"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.475983, 0.18278062, 35.019836)
 bone_idx = 69
 
-[node name="Wall_corner_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="70"]
+[node name="Wall_corner_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="72"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.235596, 0.031353354, 38.117077)
 bone_idx = 70
 
-[node name="Wall_corner_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="71"]
+[node name="Wall_corner_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="73"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.007498, 0.03135526, 40.66992)
 bone_idx = 71
 
-[node name="Wall_corner_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="72"]
+[node name="Wall_corner_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="74"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.337011, 0.031354785, 43.058544)
 bone_idx = 72
 
-[node name="Fence" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="73"]
+[node name="Fence" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="75"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.153194, 0.49828148, 45.960804)
 bone_idx = 73
 
-[node name="Fence_corner" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="74"]
+[node name="Fence_corner" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="76"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.642511, -0.009513989, 49.62798)
 bone_idx = 74
 
-[node name="Fence_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="75"]
+[node name="Fence_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="77"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.968637, -0.009515062, 49.960804)
 bone_idx = 75
 
-[node name="Fence_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="76"]
+[node name="Fence_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="78"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.153193, -0.009515062, 51.777523)
 bone_idx = 76
 
-[node name="Roadblock" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="77"]
+[node name="Roadblock" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="79"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.014196873, 31)
 bone_idx = 77
 
 [node name="Building_11_duplicate" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.45126, 0, 82.27541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.991001, 0, 91.661606)
 mesh = SubResource("ArrayMesh_x177d")
 skeleton = NodePath("")
 
 [node name="Generator2" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.837967, 0.003324449, 71.02723)
+transform = Transform3D(0.52510035, 0, -0.8510403, 0, 1, 0, 0.8510403, 0, 0.52510035, 47.041103, 0.003324449, 84.33269)
+mesh = SubResource("ArrayMesh_c6uxf")
+skeleton = NodePath("")
+
+[node name="Generator3" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like"]
+transform = Transform3D(0.99976206, 0, 0.021814853, 0, 1, 0, -0.021814853, 0, 0.99976206, 54.9813, 0.085053444, 88.048256)
 mesh = SubResource("ArrayMesh_c6uxf")
 skeleton = NodePath("")
 
 [node name="Palet_stack2" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.560165, 0.88899755, 73.98164)
+transform = Transform3D(0.966868, -0.255277, 0, 0.255277, 0.966868, 0, 0, 0, 1, 48.13336, 0.68402576, 89.880486)
+mesh = SubResource("ArrayMesh_px8o8")
+skeleton = NodePath("")
+
+[node name="Palet_stack4" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like"]
+transform = Transform3D(0.15283066, 0.22410493, -0.9625071, 0.8963536, 0.3787071, 0.23050272, 0.4161651, -0.8979744, -0.14299917, 68.20921, 1.3630898, 88.44586)
+mesh = SubResource("ArrayMesh_px8o8")
+skeleton = NodePath("")
+
+[node name="Palet_stack3" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like"]
+transform = Transform3D(0.42275074, -0.5207889, -0.74166083, 0.60612553, 0.7708877, -0.19581677, 0.6737163, -0.36675793, 0.64155674, 48.818897, 0.82818687, 88.575485)
 mesh = SubResource("ArrayMesh_px8o8")
 skeleton = NodePath("")
 
 [node name="flesh" parent="." instance=ExtResource("2_otbkq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.01612, 0.28992748, 8.8647995)
+transform = Transform3D(0.96635365, 0, 0.2572171, 0, 1, 0, -0.2572171, 0, 0.96635365, 25.660892, 4.2899275, 26.612204)
 
 [editable path="floor/IndustrialHorror_PS_like"]

@@ -7,11 +7,13 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2nim2"]
 
 [node name="flesh" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19575334, 0)
 
 [node name="Player" type="CharacterBody3D" parent="."]
 script = ExtResource("1_1v327")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.63714266, 0)
 shape = SubResource("CapsuleShape3D_2nim2")
 
 [node name="HeadPivot" type="Node3D" parent="Player"]

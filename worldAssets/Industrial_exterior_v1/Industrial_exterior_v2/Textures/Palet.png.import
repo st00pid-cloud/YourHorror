@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ib46vxipyu7h"
-path.s3tc="res://.godot/imported/Palet.png-969177ee0fd33092857394f74925ec55.s3tc.ctex"
+path.s3tc="res://.godot/imported/Palet.png-a925fc07d226f54c8970cd0fccbac35c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/textures/Palet.png"
-dest_files=["res://.godot/imported/Palet.png-969177ee0fd33092857394f74925ec55.s3tc.ctex"]
+source_file="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Palet.png"
+dest_files=["res://.godot/imported/Palet.png-a925fc07d226f54c8970cd0fccbac35c.s3tc.ctex"]
 
 [params]
 
