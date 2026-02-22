@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dqbsffve6o6co"]
+[gd_scene load_steps=37 format=4 uid="uid://dqbsffve6o6co"]
 
 [ext_resource type="Texture2D" uid="uid://cv8f2xsfwfbuv" path="res://levels/texture.jpg" id="1_5gy70"]
 [ext_resource type="PackedScene" uid="uid://bcpl721qe1lkp" path="res://playerAssets/flesh.tscn" id="2_otbkq"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bwbwmt1m7iax2" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Wall.png" id="4_pg6fp"]
 [ext_resource type="Texture2D" uid="uid://ib46vxipyu7h" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Palet.png" id="5_f7dxi"]
 [ext_resource type="PackedScene" uid="uid://clp85rer3l6cw" path="res://worldAssets/Trees/Trees/Trees.fbx" id="9_mgp5f"]
+[ext_resource type="Texture2D" uid="uid://bvtijb77rp2x3" path="res://gameUI/Trauma cinemática __Hice esto a lo pendejo no le hagan tanto caso mujer _#oc #ocart #Dibujos #artedigital.jpg" id="10_d7q0c"]
+[ext_resource type="Texture2D" uid="uid://mr2gskvsucp6" path="res://gameUI/6b52b0b3613ecb7f5d8db3bd810a57de.jpg" id="11_viafp"]
+[ext_resource type="PackedScene" uid="uid://dkuyl21ojg81b" path="res://options_screen.tscn" id="12_18dv2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n105"]
 size = Vector3(350, 1, 350)
@@ -215,11 +218,22 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7ehhi")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mgp5f"]
+size = Vector3(15.395649, 6.4730835, 6.3117533)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_pg6fp"]
 size = Vector3(36.424683, 6.2161865, 13.831848)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mgp5f"]
-size = Vector3(36.248535, 6.4730835, 14.536438)
+[sub_resource type="BoxShape3D" id="BoxShape3D_viafp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_87lag"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3bte"]
+albedo_texture = ExtResource("10_d7q0c")
+albedo_texture_force_srgb = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18dv2"]
+albedo_texture = ExtResource("11_viafp")
 
 [node name="Biotic" type="Node3D"]
 
@@ -230,7 +244,7 @@ shape = SubResource("BoxShape3D_8n105")
 debug_fill = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
-transform = Transform3D(350, 0, 0, 0, 1, 0, 0, 0, 350, 0.08889389, -3.8146973e-06, 0.1368866)
+transform = Transform3D(350, 0, 0, 0, 1, 0, 0, 0, 350, -0.2592697, -0.7735462, 0.6118469)
 material_override = SubResource("StandardMaterial3D_otbkq")
 mesh = SubResource("BoxMesh_5gy70")
 
@@ -240,6 +254,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.645103, -0.01763916, -59.
 [node name="Building_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.07061, 0.012497902, -70.94217)
 bone_idx = 0
+
+[node name="Building_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_1" index="0"]
+transform = Transform3D(-0.09879876, 0, 0.9951074, 0, 1, 0, -0.9951074, 0, -0.09879876, -48.246628, 0, 114.92049)
 
 [node name="Building_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, -47)
@@ -256,17 +273,29 @@ transform = Transform3D(-0.99732983, 0, 0.07302928, 0, 1, 0, -0.07302928, 0, -0.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.92455, -0.014627218, -14.366824)
 bone_idx = 3
 
+[node name="Building_4" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_4" index="0"]
+transform = Transform3D(0.90860295, 0, -0.41766092, 0, 1, 0, 0.41766092, 0, 0.90860295, -27.825329, 0, 35.98795)
+
 [node name="Building_5" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.93851, -0.04940939, -2.2483845)
 bone_idx = 4
+
+[node name="Building_5" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_5" index="0"]
+transform = Transform3D(0.08240817, 0, -0.99659866, 0, 1, 0, 0.99659866, 0, 0.08240817, -19.837532, 0, 34.291016)
 
 [node name="Building_6" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.99243, -0.0849762, 8.805706)
 bone_idx = 5
 
+[node name="Building_6" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_6" index="0"]
+transform = Transform3D(0.90709543, 0, -0.420925, 0, 1, 0, 0.420925, 0, 0.90709543, -58.93513, 0, 59.425674)
+
 [node name="Building_7" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.807686, -0.01942563, 21.671875)
 bone_idx = 6
+
+[node name="Building_7" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_7" index="0"]
+transform = Transform3D(0.9797363, 0, 0.20029137, 0, 1, 0, -0.20029137, 0, 0.9797363, -30.576431, 0, 41.432693)
 
 [node name="Building_8" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 36)
@@ -280,9 +309,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 54)
 bone_idx = 8
 
 [node name="Building_9" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_9" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23.019478)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Building_9/Building_9" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1803017, 0, 23.019478)
 
 [node name="Building_10" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67, 0, 76)
@@ -506,17 +533,29 @@ bone_idx = 57
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, 42)
 bone_idx = 58
 
+[node name="Alphalt_Floor" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Alphalt_Floor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.44792, 0, 0)
+
 [node name="Concrete_stairs" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="60"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.29876, 0.019178271, 42.852154)
 bone_idx = 59
+
+[node name="Concrete_stairs" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Concrete_stairs" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.44792, 0, 0)
 
 [node name="Concrete_miniwall_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="61"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.637589, 0.017599225, 39.207687)
 bone_idx = 60
 
+[node name="Concrete_miniwall_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Concrete_miniwall_long" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.44792, 0, 0)
+
 [node name="Concrete_miniwall_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="62"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.527237, 0.017599225, 41.70972)
 bone_idx = 61
+
+[node name="Concrete_miniwall_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Concrete_miniwall_short" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.44792, 0, 0)
 
 [node name="Road_curved" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="63"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.773384, 0.90818423, -14.68683)
@@ -538,6 +577,9 @@ bone_idx = 65
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.5688, 0.90818083, 18.274834)
 bone_idx = 66
 
+[node name="Road_turn_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Road_turn_2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.453334, 0, -45.517326)
+
 [node name="Road_turn_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="68"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.568802, 0.90818083, 17.945719)
 bone_idx = 67
@@ -545,6 +587,9 @@ bone_idx = 67
 [node name="Wall" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="69"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.940952, 0.031353354, 35.028202)
 bone_idx = 68
+
+[node name="Wall" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Wall" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
 
 [node name="Wall2" type="BoneAttachment3D" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="70"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.940952, 0.031353354, 35.028202)
@@ -560,37 +605,64 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.475983, 0.18278062, 35.019836)
 bone_idx = 69
 
+[node name="Wall_column" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Wall_column" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
+
 [node name="Wall_corner_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="72"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.235596, 0.031353354, 38.117077)
 bone_idx = 70
+
+[node name="Wall_corner_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Wall_corner_1" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
 
 [node name="Wall_corner_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="73"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.007498, 0.03135526, 40.66992)
 bone_idx = 71
 
+[node name="Wall_corner_2" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Wall_corner_2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
+
 [node name="Wall_corner_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="74"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.337011, 0.031354785, 43.058544)
 bone_idx = 72
+
+[node name="Wall_corner_3" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Wall_corner_3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
 
 [node name="Fence" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="75"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.153194, 0.49828148, 45.960804)
 bone_idx = 73
 
+[node name="Fence" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Fence" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
+
 [node name="Fence_corner" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="76"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.642511, -0.009513989, 49.62798)
 bone_idx = 74
+
+[node name="Fence_corner" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Fence_corner" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
 
 [node name="Fence_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="77"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.968637, -0.009515062, 49.960804)
 bone_idx = 75
 
+[node name="Fence_long" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Fence_long" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
+
 [node name="Fence_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="78"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.153193, -0.009515062, 51.777523)
 bone_idx = 76
 
+[node name="Fence_short" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Fence_short" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
+
 [node name="Roadblock" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="79"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.014196873, 31)
 bone_idx = 77
+
+[node name="Roadblock" parent="floor/IndustrialHorror_PS_like/Skeleton3D/Roadblock" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.415329, 0, -15.341584)
 
 [node name="Building_11_duplicate" type="MeshInstance3D" parent="floor/IndustrialHorror_PS_like"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.991001, 0, 91.661606)
@@ -625,6 +697,10 @@ skeleton = NodePath("")
 [node name="flesh" parent="." instance=ExtResource("2_otbkq")]
 transform = Transform3D(0.96635365, 0, 0.2572171, 0, 1, 0, -0.2572171, 0, 0.96635365, 25.660892, 1.0663958, 26.612204)
 
+[node name="buil_C" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.9912271, 0, 0.255223, 0, 1.5593055, 0, -0.13216989, 0, 1.9140817, -41.073067, 2.932707, -14.323468)
+shape = SubResource("BoxShape3D_mgp5f")
+
 [node name="collisions" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.5593055, 0, 0, 0, 1, 0, 5.142084, 14.955345)
 
@@ -633,10 +709,69 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.251109, 0.31805444, 3.7253
 shape = SubResource("BoxShape3D_pg6fp")
 
 [node name="buil_B" type="CollisionShape3D" parent="collisions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3896123, 11.360596, -0.7084491, 25.093746)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3896123, 14.583271, -0.7084491, 25.261017)
+shape = SubResource("BoxShape3D_mgp5f")
+
+[node name="buil_D" type="CollisionShape3D" parent="collisions"]
+transform = Transform3D(1.0235542, 0, -0.6654993, 0, 1, 0, -0.0025187582, 0, 3.6446757, -18.06896, -2.833796, 51.617363)
 shape = SubResource("BoxShape3D_mgp5f")
 
 [node name="Trees" parent="." instance=ExtResource("9_mgp5f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.16335, 0, 47.654606)
 
+[node name="Tree_4" parent="Trees" index="0"]
+transform = Transform3D(84.57651, 53.35554, 0, 6.3604775e-06, -1.0082305e-05, 99.99999, 53.355545, -84.5765, -1.1920929e-05, 66.549034, 0.30590636, -52.672707)
+
+[node name="Tree_3" parent="Trees" index="1"]
+transform = Transform3D(42.591408, -90.47635, -1.4901161e-05, -2.980232e-06, -2.3841856e-05, 100, -90.47635, -42.59141, -1.1920929e-05, 69.65859, 0.30592614, -0.38226622)
+
+[node name="Tree_1" parent="Trees" index="2"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 55.909256, 0.30591273, 0.8501198)
+
+[node name="Tree_2" parent="Trees" index="3"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 55.659122, -0.06485742, -15.793524)
+
+[node name="Tree_5" parent="Trees" index="4"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 54.773502, 0.23469248, -1.8783451)
+
+[node name="Tree" parent="Trees" index="7"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 50.354156, -0.2812747, -43.50168)
+
+[node name="end_for_now" type="StaticBody3D" parent="."]
+transform = Transform3D(0.6328349, 0, 0, 0, 7.80592, 0, 0, 0, 9.260177, -14.450482, 4.498273, -8.378258)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="end_for_now"]
+transform = Transform3D(1, 0, 0, 0, 0.99999917, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_viafp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="end_for_now"]
+mesh = SubResource("BoxMesh_87lag")
+surface_material_override/0 = SubResource("StandardMaterial3D_a3bte")
+
+[node name="i_guess_so_bro" type="StaticBody3D" parent="."]
+transform = Transform3D(0.41644263, 0, -6.9726024, 0, 7.80592, 0, 0.47650346, 0, 6.0937414, -21.071487, 4.498273, 25.832548)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="i_guess_so_bro"]
+transform = Transform3D(1, 0, 0, 0, 0.99999917, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_viafp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="i_guess_so_bro"]
+transform = Transform3D(1.1650554, 0, 1.9073486e-06, 0, 1.4318275, 0, -3.7252903e-09, 0, 1.2591724, 0, 0.13682261, 0)
+mesh = SubResource("BoxMesh_87lag")
+surface_material_override/0 = SubResource("StandardMaterial3D_18dv2")
+
+[node name="OPTIONS_PART" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="OPTIONS_PART"]
+offset_left = 1000.0
+offset_top = 14.0
+offset_right = 1138.0
+offset_bottom = 52.0
+text = "MENU"
+
+[node name="options" parent="OPTIONS_PART/Button" instance=ExtResource("12_18dv2")]
+visible = false
+position = Vector2(-1000, -14)
+
 [editable path="floor/IndustrialHorror_PS_like"]
+[editable path="Trees"]

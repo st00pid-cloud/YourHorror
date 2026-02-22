@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var default_height := 1.7 # Set this to your desired eye-level
+@export var default_height := 1.7 
 
 @export_group("Leaning")
 @export var lean_amount := 0.05
