@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqexfwsj1xiku"]
+
+[ext_resource type="Script" uid="uid://t3q65cjvvmq3" path="res://propsAssets/Game_UI/aboutpage.gd" id="1_jr28n"]
+[ext_resource type="Texture2D" uid="uid://d25mc8lb8n5nn" path="res://cutscenes/assets_cutsce/sprites/characters/1000024845_2439ad47168a389648df11f3c6c647ec-2_20_2026, 10_04_35 PM.jpg" id="2_c5ks6"]
+
+[node name="aboutpage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jr28n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -573.0
+offset_top = -324.0
+offset_right = 577.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect"]
+position = Vector2(265, 299)
+scale = Vector2(0.11683006, 0.11785131)
+texture = ExtResource("2_c5ks6")
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 180.0
+offset_right = 1032.0
+offset_bottom = 437.0
+text = ">> be me (Justine Mae Macario) 
+>> don't go to school, fail a lot, volunteer a lot, go to events a lot. 
+>> do crazy things outside, forget school
+>> do things solo to learn
+>> work for DOST things, meet people from various univs all around PH
+>> still don't go to school, do TSOD volunteering instead
+>> i actually want cybsec??!?!? bad life decisions, unemployment
+>> lesson learned: go to school"
+
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 407.0
+offset_right = 642.0
+offset_bottom = 444.0
+text = "GO BACK"
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/Button" to="." method="_on_start_go_back"]

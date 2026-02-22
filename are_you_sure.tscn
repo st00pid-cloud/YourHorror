@@ -1,39 +1,36 @@
 [gd_scene format=3 uid="uid://b7pqjeb2alr7q"]
 
-[node name="are_you_sure" type="Node2D"]
-
-[node name="Control" type="Control" parent="."]
+[node name="are_you_sure" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
-[node name="ColorRect" type="ColorRect" parent="Control/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_left = 331.0
 offset_top = 224.0
 offset_right = 766.0
 offset_bottom = 422.0
 color = Color(0, 0, 0, 0.49803922)
 
-[node name="CenterContainer" type="CenterContainer" parent="Control/CanvasLayer/ColorRect"]
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/ColorRect"]
 layout_mode = 0
 offset_top = -2.0
 offset_right = 436.0
 offset_bottom = 200.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/CanvasLayer/ColorRect/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/CenterContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "ARE YOU SURE?"
 
-[node name="Button" type="Button" parent="Control/CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "YES"
 
-[node name="Button2" type="Button" parent="Control/CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "NO"

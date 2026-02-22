@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkuyl21ojg81b"]
+
+[ext_resource type="Script" uid="uid://bu73p8lojli3t" path="res://options_screen_new.gd" id="1_666cw"]
+[ext_resource type="PackedScene" uid="uid://b7pqjeb2alr7q" path="res://are_you_sure.tscn" id="2_666cw"]
+
+[node name="menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = 169.0
+offset_top = 142.00005
+offset_right = 169.0
+offset_bottom = 142.00005
+scale = Vector2(-72473464, 41325.973)
+script = ExtResource("1_666cw")
+
+[node name="are_you_sure" parent="." instance=ExtResource("2_666cw")]
+visible = false
+layout_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 411.0
+offset_top = 120.0
+offset_right = 738.0
+offset_bottom = 542.0
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_right = 326.0
+offset_bottom = 420.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/CenterContainer"]
+layout_mode = 2
+
+[node name="OPTIONS" type="Label" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="BACK TO GAME" type="Button" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "BACK TO GAME"
+
+[node name="SFX" type="GridContainer" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer/SFX"]
+layout_mode = 2
+text = "SFX"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer/SFX"]
+layout_mode = 2
+
+[node name="EXIT GAME" type="Button" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "EXIT GAME"
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/CenterContainer/VBoxContainer/BACK TO GAME" to="." method="_on_back_to_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/CenterContainer/VBoxContainer/EXIT GAME" to="." method="_on_exit_game_pressed"]

@@ -54,9 +54,9 @@ func _handle_head_bob(delta: float) -> void:
 func _handle_lean(delta: float) -> void:
 	var target_z := 0.0
 	
-	if Input.is_action_pressed("lean_left"):
+	if Input.is_action_pressed("left"):
 		target_z = lean_amount
-	elif Input.is_action_pressed("lean_right"):
+	elif Input.is_action_pressed("right"):
 		target_z = -lean_amount
 		
 	rotation.z = lerp_angle(rotation.z, target_z, delta * lean_smoothness)

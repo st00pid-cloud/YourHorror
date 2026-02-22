@@ -13,3 +13,15 @@ func _process(delta):
 		# Sine wave formula: y = sin(x * freq + time) * amp
 		var y = sin((x * 0.01) * frequency + time) * amplitude
 		add_point(Vector2(x, 540 + y)) # 540 is the vertical center
+
+
+func _on_start_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_settings_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_exit_pressed() -> void:
+	pass # Replace with function body.
