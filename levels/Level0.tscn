@@ -1,32 +1,32 @@
 [gd_scene load_steps=36 format=4 uid="uid://dqbsffve6o6co"]
 
-[ext_resource type="PackedScene" uid="uid://ijd1bih8jfgd" path="res://gameUI/lineFlicker.tscn" id="1_ghl7b"]
-[ext_resource type="Texture2D" uid="uid://cv8f2xsfwfbuv" path="res://levels/texture.jpg" id="2_gooe2"]
-[ext_resource type="PackedScene" uid="uid://co5cnqdod8oat" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Models/IndustrialHorror_PS_like.fbx" id="3_rnfls"]
-[ext_resource type="Texture2D" uid="uid://dvarfvwiqx0il" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Cooling_tower.png" id="4_joalv"]
-[ext_resource type="Texture2D" uid="uid://bwbwmt1m7iax2" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Wall.png" id="5_8ical"]
-[ext_resource type="Texture2D" uid="uid://dawyb682ura1x" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Building_7.png" id="6_3tk0x"]
-[ext_resource type="Texture2D" uid="uid://bmjtms7igu6er" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Generator.png" id="7_yg0p1"]
-[ext_resource type="Texture2D" uid="uid://ib46vxipyu7h" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Palet.png" id="8_jthkj"]
-[ext_resource type="PackedScene" uid="uid://bcpl721qe1lkp" path="res://playerAssets/flesh.tscn" id="9_wm4fy"]
-[ext_resource type="PackedScene" uid="uid://clp85rer3l6cw" path="res://worldAssets/Trees/Trees/Trees.fbx" id="10_ha1oq"]
-[ext_resource type="PackedScene" uid="uid://dkuyl21ojg81b" path="res://mainMenu/menu.tscn" id="11_ko38h"]
-[ext_resource type="PackedScene" uid="uid://ddiey7q65lrej" path="res://propsAssets/poster_assembled.tscn" id="12_rnfls"]
-[ext_resource type="PackedScene" uid="uid://caglg4p0mqdyl" path="res://GameCursor.tscn" id="13_rnfls"]
-[ext_resource type="PackedScene" uid="uid://dghwxbanoswgw" path="res://TextInGame.tscn" id="14_joalv"]
+[ext_resource type="PackedScene" uid="uid://ijd1bih8jfgd" path="res://gameUI/lineFlicker.tscn" id="1_yye3l"]
+[ext_resource type="Texture2D" uid="uid://cv8f2xsfwfbuv" path="res://levels/texture.jpg" id="2_gnwoi"]
+[ext_resource type="PackedScene" uid="uid://co5cnqdod8oat" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Models/IndustrialHorror_PS_like.fbx" id="3_ohbpv"]
+[ext_resource type="Texture2D" uid="uid://dvarfvwiqx0il" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Cooling_tower.png" id="4_skuna"]
+[ext_resource type="Texture2D" uid="uid://bwbwmt1m7iax2" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Wall.png" id="5_wssi3"]
+[ext_resource type="Texture2D" uid="uid://dawyb682ura1x" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Building_7.png" id="6_kc2to"]
+[ext_resource type="Texture2D" uid="uid://bmjtms7igu6er" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Generator.png" id="7_veoc0"]
+[ext_resource type="Texture2D" uid="uid://ib46vxipyu7h" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Palet.png" id="8_83blj"]
+[ext_resource type="PackedScene" uid="uid://bcpl721qe1lkp" path="res://playerAssets/flesh.tscn" id="9_ig5id"]
+[ext_resource type="PackedScene" uid="uid://clp85rer3l6cw" path="res://worldAssets/Trees/Trees/Trees.fbx" id="10_aw8ge"]
+[ext_resource type="PackedScene" uid="uid://dkuyl21ojg81b" path="res://mainMenu/menu.tscn" id="11_6jwhj"]
+[ext_resource type="PackedScene" uid="uid://caglg4p0mqdyl" path="res://GameCursor.tscn" id="12_juwty"]
+[ext_resource type="PackedScene" uid="uid://ddiey7q65lrej" path="res://propsAssets/poster_assembled.tscn" id="13_tjfwm"]
+[ext_resource type="PackedScene" uid="uid://dghwxbanoswgw" path="res://TextInGame.tscn" id="14_b2oi8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n105"]
 size = Vector3(350, 1, 350)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otbkq"]
-albedo_texture = ExtResource("2_gooe2")
+albedo_texture = ExtResource("2_gnwoi")
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gy70"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8frx1"]
 resource_name = "Cooling_tower"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("4_joalv")
+albedo_texture = ExtResource("4_skuna")
 emission_enabled = true
 emission_energy_multiplier = 0.0
 
@@ -67,7 +67,7 @@ shadow_mesh = SubResource("ArrayMesh_to16p")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2wkv"]
 resource_name = "Wall"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("5_8ical")
+albedo_texture = ExtResource("5_wssi3")
 emission_enabled = true
 emission_energy_multiplier = 0.0
 
@@ -106,7 +106,7 @@ shadow_mesh = SubResource("ArrayMesh_r0awv")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23v84"]
 resource_name = "Building_11"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("6_3tk0x")
+albedo_texture = ExtResource("6_kc2to")
 emission_enabled = true
 emission_energy_multiplier = 0.0
 
@@ -145,7 +145,7 @@ shadow_mesh = SubResource("ArrayMesh_wabpa")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8t7hi"]
 resource_name = "Generator"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("7_yg0p1")
+albedo_texture = ExtResource("7_veoc0")
 emission_enabled = true
 emission_energy_multiplier = 0.0
 
@@ -184,7 +184,7 @@ shadow_mesh = SubResource("ArrayMesh_etpan")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w11ni"]
 resource_name = "Palet"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("8_jthkj")
+albedo_texture = ExtResource("8_83blj")
 emission_enabled = true
 emission_energy_multiplier = 0.0
 
@@ -262,9 +262,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q4bac")
 
-[node name="Game_Itself" type="Node3D"]
+[node name="Level0" type="Node3D"]
 
-[node name="first_screen" parent="." instance=ExtResource("1_ghl7b")]
+[node name="first_screen" parent="." instance=ExtResource("1_yye3l")]
 visible = false
 
 [node name="floor" type="StaticBody3D" parent="."]
@@ -279,7 +279,7 @@ material_override = SubResource("StandardMaterial3D_otbkq")
 mesh = SubResource("BoxMesh_5gy70")
 metadata/_edit_lock_ = true
 
-[node name="IndustrialHorror_PS_like" parent="floor" instance=ExtResource("3_rnfls")]
+[node name="IndustrialHorror_PS_like" parent="floor" instance=ExtResource("3_ohbpv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.645103, -0.01763916, -59.350044)
 
 [node name="Building_1" parent="floor/IndustrialHorror_PS_like/Skeleton3D" index="0"]
@@ -730,13 +730,13 @@ transform = Transform3D(0.42275074, -0.5207889, -0.74166083, 0.60612553, 0.77088
 mesh = SubResource("ArrayMesh_px8o8")
 skeleton = NodePath("")
 
-[node name="flesh" parent="." instance=ExtResource("9_wm4fy")]
+[node name="flesh" parent="." instance=ExtResource("9_ig5id")]
 transform = Transform3D(0.9103589, 0, 0.41381955, 0, 1, 0, -0.41381955, 0, 0.9103589, 25.550213, 0.51311636, 26.56548)
 
 [node name="RayCast3D" parent="flesh/Player/HeadPivot/Camera3D" index="1"]
 target_position = Vector3(0, -1, -5)
 
-[node name="Trees" parent="." instance=ExtResource("10_ha1oq")]
+[node name="Trees" parent="." instance=ExtResource("10_aw8ge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.16335, 0, 47.654606)
 
 [node name="Tree_4" parent="Trees" index="0"]
@@ -759,17 +759,17 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 
 [node name="OPTIONS_PART" type="CanvasLayer" parent="."]
 
-[node name="menu" parent="OPTIONS_PART" instance=ExtResource("11_ko38h")]
+[node name="menu" parent="OPTIONS_PART" instance=ExtResource("11_6jwhj")]
 
-[node name="CanvasLayer" parent="." instance=ExtResource("13_rnfls")]
+[node name="CanvasLayer" parent="." instance=ExtResource("12_juwty")]
 
-[node name="poster_interactable" parent="." instance=ExtResource("12_rnfls")]
+[node name="poster_interactable" parent="." instance=ExtResource("13_tjfwm")]
 transform = Transform3D(0.055612426, 0, -0.9984524, -0.99841785, 0.0083251, -0.0556105, 0.008312217, 0.99996537, 0.00046298, 16.086704, 3.662386, 26.696663)
 
 [node name="Paper" parent="poster_interactable/poster assembled" index="0"]
 mesh = SubResource("ArrayMesh_rnfls")
 
-[node name="dialogue_ingame" parent="." instance=ExtResource("14_joalv")]
+[node name="dialogue_ingame" parent="." instance=ExtResource("14_b2oi8")]
 
 [editable path="floor/IndustrialHorror_PS_like"]
 [editable path="flesh"]

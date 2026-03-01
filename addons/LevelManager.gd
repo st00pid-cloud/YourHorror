@@ -4,7 +4,7 @@ extends Node
 var levels = {
 	"level_1": {
 		"scene": "res://levels/server_room.tscn",
-		"intro_cutscene": preload("res://levels/game_itself.tscn")
+		"intro_cutscene": preload("res://levels/Level0.tscn")
 	}
 }
 var current_level_id = "level_1"
