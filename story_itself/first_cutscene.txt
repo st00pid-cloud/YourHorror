@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CutsceneData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://CutsceneData.gd" id="1_x86v2"]
+
+[resource]
+script = ExtResource("1_x86v2")
+dialogue_lines = Array[String]([
+"The hum of the cooling fans was low, a rhythmic thrumming.",
+"'Hey, I'm at the source. But the biometric lock was... melted.'",
+"The flashlight beam wavered. [YES | YES]",
+"[Superior] 'Do not pull the bridge.'",
+"You look closer. [YES | YES]",
+"You black out."
+])
+scary_keywords = {
+"melted": "light_glitch",
+"pull": "heavy_shake",
+"wavered": "flash_red"
+}
+next_scene_path = "res://levels/game_itself.tscn"
