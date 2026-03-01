@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CutsceneData" load_steps=2 format=3 uid="uid://chomar1s7oyu1"]
+
+[ext_resource type="Script" uid="uid://ybyxov2ojw03" path="res://addons/CutsceneData.gd" id="1_x7ex6"]
+
+[resource]
+script = ExtResource("1_x7ex6")
+dialogue_lines = Array[String](["The hum of the cooling fans was low, a rhythmic thrumming that felt less like machinery and more like a heartbeat.", "[FLESH] \"'Hey, I'm at the source. But the biometric lock wasn't bypassed. It was ... melted\", ", "[Narration] \"The flashlight beam wavered\", ", "[SUPERIOR] \"'Hey [flesh], status.' Communications crackled\", ", "[NARRATION] \"No words, in front a body who had gone dark, 48 hours ago, suspended\", ", "\"[Superior] 'Do not pull the bridge'\", ", "\" Pull the bridge [YES | YES]\", "])
+metadata/_custom_type_script = "uid://ybyxov2ojw03"

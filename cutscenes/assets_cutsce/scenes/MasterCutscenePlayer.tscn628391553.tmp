@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://du147fr405taa"]
+[gd_scene load_steps=4 format=3 uid="uid://du147fr405taa"]
 
-[ext_resource type="Resource" uid="uid://chomar1s7oyu1" path="res://Intro.tres" id="1_wdeo5"]
 [ext_resource type="Texture2D" uid="uid://7vpmdsx5miwv" path="res://cutscenes/assets_cutsce/Background.png" id="2_2677u"]
 [ext_resource type="Texture2D" uid="uid://bqcpd7eqkpxr2" path="res://cutscenes/assets_cutsce/sprites/characters/Untitled156_20260128011939.png" id="3_nurt0"]
 
 [sub_resource type="GDScript" id="GDScript_qn12f"]
+resource_local_to_scene = true
+resource_name = "first_cutscene"
 script/source = "extends Control
 # --- Data Input ---
 @export var cutscene_resource: CutsceneData
@@ -54,7 +55,7 @@ func show_dialogue():
 		# Choice Detection
 		if \"[YES | YES]\" in current_text:
 			next_button.hide()
-			setup_choices(current_text) # Add current_text back inside the parentheses
+			setup_choices()
 		else:
 			choice_container.hide()
 			next_button.show()
@@ -150,7 +151,7 @@ func start_level_transition():
 	fade_tween.finished.connect(func():
 		get_tree().change_scene_to_file(\"res://levels/game_itself.tscn\")
 	)
-func setup_choices(text: String): # Make sure (text: String) is here
+func setup_choices(text: String):
 	choice_container.show()
 	choice_button_1.text = \"YES\"
 	
@@ -212,7 +213,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_qn12f")
-cutscene_resource = ExtResource("1_wdeo5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -300,7 +300,6 @@ layout_mode = 2
 
 [node name="ErrorScreen" type="Panel" parent="CanvasLayer/NinePatchRect"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
