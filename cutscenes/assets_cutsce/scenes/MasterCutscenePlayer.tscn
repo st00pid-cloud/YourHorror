@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://du147fr405taa"]
 
-[ext_resource type="Script" uid="uid://5ql8nxvgcm7c" path="res://cutscenes/assets_cutsce/scenes/MasterCutscenePlayerLogic.gd" id="1_d218d"]
-[ext_resource type="Texture2D" uid="uid://7vpmdsx5miwv" path="res://cutscenes/assets_cutsce/Background.png" id="2_j44p7"]
-[ext_resource type="Texture2D" uid="uid://bqcpd7eqkpxr2" path="res://cutscenes/assets_cutsce/sprites/characters/Untitled156_20260128011939.png" id="2_l2mel"]
+[ext_resource type="Script" uid="uid://5ql8nxvgcm7c" path="res://cutscenes/assets_cutsce/scenes/MasterCutscenePlayerLogic.gd" id="1_wdeo5"]
+[ext_resource type="Texture2D" uid="uid://7vpmdsx5miwv" path="res://cutscenes/assets_cutsce/Background.png" id="2_2677u"]
+[ext_resource type="Texture2D" uid="uid://bqcpd7eqkpxr2" path="res://cutscenes/assets_cutsce/sprites/characters/Untitled156_20260128011939.png" id="3_nurt0"]
 
-[node name="first_cutscene" type="Control"]
+[node name="MasterCutscenePlayer" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_d218d")
+script = ExtResource("1_wdeo5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -27,12 +27,12 @@ size_flags_vertical = 3
 [node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/NinePatchRect"]
 position = Vector2(578.00006, 322.5)
 scale = Vector2(0.4484375, 0.40562502)
-texture = ExtResource("2_j44p7")
+texture = ExtResource("2_2677u")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/NinePatchRect"]
 position = Vector2(170.00002, 350)
 scale = Vector2(0.37476024, 0.35413104)
-texture = ExtResource("2_l2mel")
+texture = ExtResource("3_nurt0")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/NinePatchRect"]
 layout_mode = 0
