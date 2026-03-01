@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://ijd1bih8jfgd"]
+
+[ext_resource type="Script" uid="uid://c2kt7nkp0sfsx" path="res://scripts_nkk/line_2d.gd" id="1_2nqrk"]
+[ext_resource type="Script" uid="uid://b2emv7is5pbk4" path="res://scripts_nkk/mainMenu.gd" id="1_jwy2y"]
+[ext_resource type="Shader" uid="uid://dr4txswgpxd4x" path="res://grunge.gdshader" id="2_jwy2y"]
+[ext_resource type="AudioStream" uid="uid://b4uwe3tf6qdxx" path="res://musicFiles/Kevin MacLeod - Digital Bark - (128 Kbps).mp3" id="4_qlwdj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hoxie"]
+shader = ExtResource("2_jwy2y")
+shader_parameter/bulge_amount = 0.2
+shader_parameter/aberration_amount = 0.005
+shader_parameter/scanline_count = 300.0
+shader_parameter/noise_amount = 0.05
+shader_parameter/noise_speed = 5.0
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_jwy2y")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_top = -0.0030864198
+anchor_right = 1.000294
+anchor_bottom = 0.9979672
+offset_right = -1.338623
+offset_bottom = -2.6827393
+scale = Vector2(1.001163, 1.0041529)
+color = Color(0, 0.041068032, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_hoxie")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(296, 210)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 268.0
+offset_right = 1058.0
+offset_bottom = 369.0
+
+[node name="start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "START GAME"
+
+[node name="settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "EXIT"
+
+[node name="about" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "ABOUT"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 70.0
+offset_right = 609.0
+offset_bottom = 582.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Line2D" type="Line2D" parent="SubViewportContainer/SubViewport"]
+position = Vector2(-9.000002, -194.22217)
+scale = Vector2(1.0264151, 0.80452675)
+points = PackedVector2Array(0, 260, 510, 260)
+script = ExtResource("1_2nqrk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qlwdj")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_game_main"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_game_main"]
+[connection signal="pressed" from="VBoxContainer/exit" to="SubViewportContainer/SubViewport/Line2D" method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/about" to="." method="show_about_page"]

@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkuyl21ojg81b"]
+
+[ext_resource type="Script" uid="uid://bu73p8lojli3t" path="res://scripts_nkk/options_screen_new.gd" id="1_666cw"]
+[ext_resource type="PackedScene" uid="uid://b7pqjeb2alr7q" path="res://mainMenu/are_you_sure.tscn" id="2_666cw"]
+
+[node name="menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-72473464, 41325.973)
+script = ExtResource("1_666cw")
+
+[node name="are_you_sure" parent="." instance=ExtResource("2_666cw")]
+visible = false
+layout_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.35677084
+anchor_top = 0.18518518
+anchor_right = 0.640625
+anchor_bottom = 0.83641976
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/CenterContainer"]
+layout_mode = 2
+
+[node name="OPTIONS" type="Label" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="BACK TO GAME" type="Button" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "BACK TO GAME"
+
+[node name="SFX" type="GridContainer" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer/SFX"]
+layout_mode = 2
+text = "SFX"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer/SFX"]
+layout_mode = 2
+
+[node name="EXIT GAME" type="Button" parent="CanvasLayer/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "EXIT GAME"
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/CenterContainer/VBoxContainer/BACK TO GAME" to="." method="_on_back_to_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/CenterContainer/VBoxContainer/EXIT GAME" to="." method="_on_exit_game_pressed"]

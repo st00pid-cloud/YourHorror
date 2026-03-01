@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://caglg4p0mqdyl"]
+
+[ext_resource type="Script" uid="uid://cv8x06jr7uqda" path="res://cursor_logic.gd" id="1_3rye7"]
+[ext_resource type="Texture2D" uid="uid://b6rb17cmagt2k" path="res://propsAssets/crosshair087.png" id="2_fanfj"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 100
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_3rye7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(-1.0000076, 0.9999962)
+scale = Vector2(0.49305555, 0.4722222)
+texture = ExtResource("2_fanfj")
