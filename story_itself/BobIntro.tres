@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CutsceneData" load_steps=2 format=3 uid="uid://itnuo02pyx2j"]
+
+[ext_resource type="Script" uid="uid://ybyxov2ojw03" path="res://addons/CutsceneData.gd" id="1_rhd2w"]
+
+[resource]
+script = ExtResource("1_rhd2w")
+dialogue_lines = Array[String](["January 24, 2019. You are sent to [REDACTED] to survey a data center. A newly hired technician, you swiftly comply with the task. With arrangements on the way, you sign the following documents prior to a Data Center Survey:  ", "Non-Disclosure Agreement (NDA) (Input Name)  ", "[Someone taps you from behind]", " You’re the new Network Engineer, right? I’m Bob, a Security Specialist for these surveys.", " Nothing much really, I just wanted you to feel more comfortable with the team, company culture blah blah all that. But really, feel free to approach me.", "[BOB] It’s a small team so I wouldn’t want anyone feeling left out. I keep my eye out on things, security reasons haha.  ", " [BOB] Also, don’t be late on the site to visit itself alright? Previous NetEng struggled with that A LOT.  ", "[Silence] [Thanks for the heads up, nice meeting you.] ", "First task: Look for the data-center to be surveyed.  
+Player should scout the town for the data center. Then enter. ", "Character descends from a rusted elevator. Lights flicker in a rhythmic pattern. There is a heavy industrial hum with the sound of a dial-modem screaming in the distance. ", "[Why on earth are we even surveying a run-down facility? This should have already been shut down by ISO or something. Who even hosts here?]  ", ">> ELEVATOR STOPS <<  ", "[Phone Rings]  
+[PICK UP] [IGNORE]  ", "[BOB] “ Hey, you here yet? “  ", "[YEAH] (Yeah, why is it underground again?)  ", "[BOB] Great, team’s already at the entrance. We’re just waiting for two of our facility engineers to arrive. We’d have to finish this one quickly.", "[You meetup with the team, all with a puzzled look on their faces] ", "The elevator doors open to reveal a hallway lined with thick, pulsating black cables that suspiciously look like veins.  ", "[FLESH] ...  "])
+metadata/_custom_type_script = "uid://ybyxov2ojw03"

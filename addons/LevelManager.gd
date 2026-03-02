@@ -2,12 +2,12 @@ extends Node
 #game architecture is so ass
 # Dictionary to store all your levels and their corresponding cutscenes
 var levels = {
-	"level_1": {
-		"scene": "res://levels/server_room.tscn",
-		"intro_cutscene": preload("res://levels/Level0.tscn")
+	"level_0": {
+		"scene": "res://levels/Level0.tscn",
+		"intro_cutscene": preload("res://story_itself/Intro.tres")
 	}
 }
-var current_level_id = "level_1"
+var current_level_id = "level_0"
 
 func load_level(level_id: String):
 	if levels.has(level_id):
@@ -15,7 +15,7 @@ func load_level(level_id: String):
 		var data = levels[level_id]
 		
 		# 1. Load the Cutscene Player Scene
-		var cutscene_player_scene = load("res://scenes/CutscenePlayer.tscn")
+		var cutscene_player_scene = load("res://cutscenes/assets_cutsce/scenes/MasterCutscenePlayer.tscn")
 		var player_instance = cutscene_player_scene.instantiate()
 		
 		# 2. Inject the specific Resource for this level

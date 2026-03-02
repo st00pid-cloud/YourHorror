@@ -1,8 +1,14 @@
 extends Control
 
 func _on_start_game_main():
-	get_tree().change_scene_to_file("res://gameUI/dev_intro.tscn")
+	LevelManager.load_level("level_0")
 
+func show_about_page():
+	get_tree().change_scene_to_file("res://propsAssets/Game_UI/aboutpage.tscn")
+	
+func _on_exit_game_main():
+	get_tree().quit()
+	
 func show_menu_main():
 	# Show both the container and the layer
 	self.show()
@@ -11,8 +17,3 @@ func show_menu_main():
 		
 	get_tree().paused = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
-func show_about_page():
-	get_tree().change_scene_to_file("res://propsAssets/Game_UI/aboutpage.tscn")
-func _on_exit_game_main():
-	get_tree().quit()

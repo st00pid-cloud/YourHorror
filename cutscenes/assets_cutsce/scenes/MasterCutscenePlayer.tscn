@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://du147fr405taa"]
+[gd_scene load_steps=4 format=3 uid="uid://du147fr405taa"]
 
-[ext_resource type="Resource" uid="uid://chomar1s7oyu1" path="res://Intro.tres" id="1_wdeo5"]
+[ext_resource type="Resource" uid="uid://chomar1s7oyu1" path="res://story_itself/Intro.tres" id="1_wdeo5"]
 [ext_resource type="Texture2D" uid="uid://7vpmdsx5miwv" path="res://cutscenes/assets_cutsce/Background.png" id="2_2677u"]
-[ext_resource type="Texture2D" uid="uid://bqcpd7eqkpxr2" path="res://cutscenes/assets_cutsce/sprites/characters/Untitled156_20260128011939.png" id="3_nurt0"]
 
 [sub_resource type="GDScript" id="GDScript_qn12f"]
 script/source = "extends Control
@@ -150,7 +149,7 @@ func start_level_transition():
 	fade_tween.finished.connect(func():
 		get_tree().change_scene_to_file(\"res://levels/game_itself.tscn\")
 	)
-func setup_choices(text: String): # Make sure (text: String) is here
+func setup_choices(text: String): 
 	choice_container.show()
 	choice_button_1.text = \"YES\"
 	
@@ -199,7 +198,6 @@ func _on_go_back_pressed():
 	current_line += 1
 	show_dialogue()
 
-
 func _on_go_back_button_pressed() -> void:
 	pass # Replace with function body.
 "
@@ -229,11 +227,6 @@ size_flags_vertical = 3
 position = Vector2(578.00006, 322.5)
 scale = Vector2(0.4484375, 0.40562502)
 texture = ExtResource("2_2677u")
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/NinePatchRect"]
-position = Vector2(170.00002, 350)
-scale = Vector2(0.37476024, 0.35413104)
-texture = ExtResource("3_nurt0")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/NinePatchRect"]
 layout_mode = 0
@@ -309,6 +302,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ErrorMessage" type="Label" parent="CanvasLayer/NinePatchRect/ErrorScreen"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
