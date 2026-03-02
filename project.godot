@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameCursor="*res://GameCursor.tscn"
 LevelManager="*res://addons/LevelManager.gd"
+TaskManager="*res://taskLogic/TaskManager.gd"
 
 [editor]
 

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CutsceneData" load_steps=2 format=3 uid="uid://c00mrp04jxd2o"]
+
+[ext_resource type="Script" uid="uid://ybyxov2ojw03" path="res://addons/CutsceneData.gd" id="1_dbtm5"]
+
+[resource]
+script = ExtResource("1_dbtm5")
+dialogue_lines = Array[String](["[BOB] Hey there [FLESH] ", "[FLESH] Place’s about to fall apart, I don’t think the checklist’s any use.  ", "[BOB] ProjManager probably never told you this but we’re paid extra to survey this area. Though ... yeah I do agree. Whatever they’re hosting here must be something beyond our minds. It’s a miracle how they even got their racks working looking at the poor ventilation and grounding here. ", "[FLESH] ... Are we going to get a bonus then?  ", "[BOB] No clue, probably...  ", "[FLESH] I'm gonna go on then. ", "[BOB] Sure, copy. ", ""])
+metadata/_custom_type_script = "uid://ybyxov2ojw03"

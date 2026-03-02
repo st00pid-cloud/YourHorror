@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TaskData" load_steps=2 format=3 uid="uid://c2xuy1uu5ujew"]
+
+[ext_resource type="Script" uid="uid://dbq2ixum831ln" path="res://taskLogic/TaskData.gd" id="1_wtp3y"]
+
+[resource]
+script = ExtResource("1_wtp3y")
+task_id = "001 "
+task_name = " POOP"
+description = " Do poo poo shit "
+metadata/_custom_type_script = "uid://dbq2ixum831ln"
