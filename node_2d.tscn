@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq5au478oxwp0"]
+[gd_scene load_steps=7 format=3 uid="uid://bq5au478oxwp0"]
 
 [ext_resource type="Script" uid="uid://d327cuprqhd7n" path="res://testArea2D.gd" id="1_wtcfe"]
 [ext_resource type="Resource" uid="uid://i33dctbvy3fv" path="res://dialogueInGame/DialogueData/FirstTask.tres" id="2_0e48y"]
 [ext_resource type="Texture2D" uid="uid://8q4gtyjobe53" path="res://playerAssets/forNow.jpg" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://b8pekynu8i413" path="res://worldAssets/cat.jpg" id="4_0hol4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e48y"]
 radius = 109.40292
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
+radius = 120.33703
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,3 +29,17 @@ stretch_mode = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(581, 314)
 shape = SubResource("CircleShape2D_0e48y")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="TextureRect2" type="TextureRect" parent="Area2D2"]
+offset_left = 40.0
+offset_top = 133.0
+offset_right = 552.0
+offset_bottom = 645.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_0hol4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(286, 335)
+shape = SubResource("CircleShape2D_0hol4")

@@ -21,6 +21,7 @@ GameCursor="*res://GameCursor.tscn"
 LevelManager="*res://addons/LevelManager.gd"
 TaskManager="*res://taskLogic/TaskManager.gd"
 DialogueManager="*res://text_in_game_ui.tscn"
+TaskWindow="*res://taskLogic/TaskWindow.gd"
 
 [editor]
 

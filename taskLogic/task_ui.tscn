@@ -28,3 +28,9 @@ color = Color(0, 0, 0, 0.33333334)
 layout_mode = 0
 offset_right = 605.0
 offset_bottom = 136.0
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ColorRect/VBoxContainer"]
+layout_mode = 2
