@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dotv1odukb3hh"]
 
-[ext_resource type="Script" uid="uid://lrmeuir3uf38" path="res://text.gd" id="1_aohfb"]
+[ext_resource type="Script" uid="uid://lrmeuir3uf38" path="res://textIngame/text.gd" id="1_aohfb"]
 
 [node name="text" type="CanvasLayer"]
 script = ExtResource("1_aohfb")

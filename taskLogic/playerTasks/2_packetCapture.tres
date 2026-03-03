@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TaskData" load_steps=2 format=3 uid="uid://de2oo43k40dv1"]
+
+[ext_resource type="Script" uid="uid://dbq2ixum831ln" path="res://taskLogic/TaskData.gd" id="1_yusu7"]
+
+[resource]
+script = ExtResource("1_yusu7")
+metadata/_custom_type_script = "uid://dbq2ixum831ln"

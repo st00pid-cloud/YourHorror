@@ -9,7 +9,7 @@ func _ready():
 
 func display_text(message: String):
 	panel.visible = true
-	label.text = "Is this alright? Helloooo"
+	label.text = "override text"
 	
 	# Simple typewriter effect
 	for letter in message:

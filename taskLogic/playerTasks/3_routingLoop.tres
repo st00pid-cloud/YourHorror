@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TaskData" load_steps=2 format=3 uid="uid://be7eska112h1f"]
+
+[ext_resource type="Script" uid="uid://dbq2ixum831ln" path="res://taskLogic/TaskData.gd" id="1_pploq"]
+
+[resource]
+script = ExtResource("1_pploq")
+task_id = "task00"
+task_name = " portFlapping"
+description = "Player checks for the high-density switch. "
+metadata/_custom_type_script = "uid://dbq2ixum831ln"

@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dkuyl21ojg81b" path="res://mainMenu/menu.tscn" id="11_6jwhj"]
 [ext_resource type="PackedScene" uid="uid://caglg4p0mqdyl" path="res://GameCursor.tscn" id="12_juwty"]
 [ext_resource type="PackedScene" uid="uid://ddiey7q65lrej" path="res://propsAssets/poster_assembled.tscn" id="13_tjfwm"]
-[ext_resource type="PackedScene" uid="uid://dghwxbanoswgw" path="res://TextInGame.tscn" id="14_b2oi8"]
+[ext_resource type="PackedScene" uid="uid://dghwxbanoswgw" path="res://textIngame/TextInGame.tscn" id="14_b2oi8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n105"]
 size = Vector3(350, 1, 350)

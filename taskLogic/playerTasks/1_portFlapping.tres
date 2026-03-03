@@ -6,5 +6,5 @@
 script = ExtResource("1_wtp3y")
 task_id = "001 "
 task_name = " POOP"
-description = " Do poo poo shit "
+description = "Port Flapping: Check for the high-density switch"
 metadata/_custom_type_script = "uid://dbq2ixum831ln"
