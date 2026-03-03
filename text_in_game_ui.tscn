@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpebxatsntfvl"]
+
+[ext_resource type="Script" uid="uid://c5h3yi0aqxete" path="res://dialogueInGame/DialogueManagerLogic.gd" id="1_tkhu4"]
+
+[node name="textInGameUI" type="CanvasLayer"]
+script = ExtResource("1_tkhu4")
+
+[node name="Node2D" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 361.0
+offset_top = -85.99999
+offset_right = 361.0
+offset_bottom = -85.99999
+scale = Vector2(0.32875514, 0.9619943)
+size_flags_horizontal = 4
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Node2D"]
+layout_mode = 0
+offset_left = -33.459557
+offset_top = 649.692
+offset_right = 219.54044
+offset_bottom = 676.692
+scale = Vector2(5.358822, 1.9348757)
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Node2D/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Node2D/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "whatis happening here"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "words should show up here"
+fit_content = true

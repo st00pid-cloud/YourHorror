@@ -4,4 +4,6 @@
 
 [resource]
 script = ExtResource("1_yusu7")
+task_id = " 002"
+task_name = " Packet Capture"
 metadata/_custom_type_script = "uid://dbq2ixum831ln"
