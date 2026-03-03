@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://lyt5adbrkkmm"]
+
+[ext_resource type="Script" uid="uid://gu8ukt4kb2yf" path="res://dialogueInGame/textData.gd" id="1_bnnib"]
+
+[resource]
+script = ExtResource("1_bnnib")
+character_name = "[Have2Refactor]"
+lines = Array[String](["Player connects their laptio to the switch's Console Port to run a packet capture", "
+[FLESH] Tapped into the console port already. ... [Running show interface command, CRC error count is climbing exponentially] 
+", "[FLESH] That's not good. ", "I should check the ethertype. {Check if its an unauthorized protocol. Is someone tunneling through the VLAN} 
+
+", "[FLESH] That's not the typical ASCII. The switch is also not processing any frames. Looks like its sequencing something. 
+", "{Show buffer full} ", "... *** Figure out how to conclude this task. "])
+metadata/_custom_type_script = "uid://gu8ukt4kb2yf"

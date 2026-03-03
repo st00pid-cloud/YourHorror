@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://ddtmquqkohjy3"]
+
+[ext_resource type="Script" uid="uid://gu8ukt4kb2yf" path="res://dialogueInGame/textData.gd" id="1_ruf22"]
+
+[resource]
+script = ExtResource("1_ruf22")
+character_name = "[Uhhh] Refactor Muli Nakshi"
+lines = Array[String](["The player reaches the Main Distribution Frame where the \"Gateway\" is located.", "[FLESH] Alright, got the Routing Loop.", "{Show packets are bouncing between the Gateway and the Null Route. The Time to Live Status is expiring and the router is spiking to 100% CPU} ", "[FLESH] Have to find the leaking IP ", "[FLESH] Already traced the loop to the UPS room, looking at the gateway router ... 
+", "{Show CAT6 cables are not plugged into the RJ45 ports. They have been threaded} ", "[FLESH] ...", "{The reveal of the engineer inside the data rack} "])
+metadata/_custom_type_script = "uid://gu8ukt4kb2yf"

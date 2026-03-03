@@ -7,11 +7,14 @@ script = ExtResource("1_tkhu4")
 
 [node name="Node2D" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_left = 361.0
-offset_top = -85.99999
-offset_right = 361.0
-offset_bottom = -85.99999
+anchor_left = 0.31336805
+anchor_top = -0.13271604
+anchor_right = 0.31336805
+anchor_bottom = -0.13271604
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 6.0
+offset_bottom = 2.0
 scale = Vector2(0.32875514, 0.9619943)
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -19,10 +22,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="PanelContainer" type="PanelContainer" parent="Node2D"]
 layout_mode = 0
-offset_left = -33.459557
-offset_top = 649.692
-offset_right = 219.54044
-offset_bottom = 676.692
+offset_left = 155.13065
+offset_top = 619.5463
+offset_right = 338.4721
+offset_bottom = 692.5463
 scale = Vector2(5.358822, 1.9348757)
 size_flags_horizontal = 0
 
@@ -34,6 +37,8 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
+stretch_mode = 2
+flip_h = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2

@@ -1,5 +1,4 @@
 extends CanvasLayer
-
 # Update these paths to match your new tree!
 @onready var name_label = $Control/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/NameLabel
 @onready var text_label = $Control/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/TextLabel
