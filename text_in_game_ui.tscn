@@ -7,26 +7,36 @@ script = ExtResource("1_tkhu4")
 
 [node name="Node2D" type="Control" parent="."]
 layout_mode = 3
-anchor_left = 0.31336805
-anchor_top = -0.13271604
-anchor_right = 0.31336805
-anchor_bottom = -0.13271604
-offset_left = 6.0
-offset_top = 2.0
-offset_right = 6.0
-offset_bottom = 2.0
-scale = Vector2(0.32875514, 0.9619943)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -349.04474
+offset_top = -428.6524
+offset_right = -349.04474
+offset_bottom = -428.6524
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.17810932, 0.6097169)
+pivot_offset = Vector2(672.7758, -6.7842407)
 size_flags_horizontal = 4
 size_flags_vertical = 0
-metadata/_edit_use_anchors_ = true
 
 [node name="PanelContainer" type="PanelContainer" parent="Node2D"]
-layout_mode = 0
-offset_left = 155.13065
-offset_top = 619.5463
-offset_right = 338.4721
-offset_bottom = 692.5463
-scale = Vector2(5.358822, 1.9348757)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.92200005
+anchor_top = 1.0
+anchor_right = 4.6280003
+anchor_bottom = 1.0
+offset_left = 536.85046
+offset_top = 463.97958
+offset_right = -5399.7495
+offset_bottom = 481.97958
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(14.1150875, 3.8630352)
+pivot_offset = Vector2(45.243233, 26.80832)
 size_flags_horizontal = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Node2D/PanelContainer"]
@@ -37,18 +47,25 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
-stretch_mode = 2
+stretch_mode = 5
 flip_h = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "whatis happening here"
+theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "words should show up here"
+theme_override_font_sizes/normal_font_size = 9
 fit_content = true
+
+[node name="Button" type="Button" parent="Node2D/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "next"
+
+[connection signal="pressed" from="Node2D/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_next_button_pressed"]
