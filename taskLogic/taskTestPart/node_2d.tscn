@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bq5au478oxwp0"]
 
-[ext_resource type="Script" uid="uid://d327cuprqhd7n" path="res://testArea2D.gd" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://d327cuprqhd7n" path="res://taskLogic/taskTestPart/testArea2D.gd" id="1_wtcfe"]
 [ext_resource type="Resource" uid="uid://i33dctbvy3fv" path="res://dialogueInGame/DialogueData/FirstTask.tres" id="2_0e48y"]
 [ext_resource type="Texture2D" uid="uid://8q4gtyjobe53" path="res://playerAssets/forNow.jpg" id="3_epypp"]
 [ext_resource type="Texture2D" uid="uid://b8pekynu8i413" path="res://worldAssets/cat.jpg" id="4_0hol4"]
-[ext_resource type="Script" uid="uid://dlvu1c0bc2fsq" path="res://taskTest.gd" id="4_q6r6c"]
+[ext_resource type="Script" uid="uid://dlvu1c0bc2fsq" path="res://taskLogic/taskTestPart/taskTest.gd" id="4_q6r6c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0e48y"]
 radius = 109.40292

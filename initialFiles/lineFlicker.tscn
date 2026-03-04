@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2kt7nkp0sfsx" path="res://scripts_nkk/line_2d.gd" id="1_2nqrk"]
 [ext_resource type="Script" uid="uid://b2emv7is5pbk4" path="res://scripts_nkk/mainMenu.gd" id="1_jwy2y"]
-[ext_resource type="Shader" uid="uid://dr4txswgpxd4x" path="res://grunge.gdshader" id="2_jwy2y"]
+[ext_resource type="Shader" uid="uid://dr4txswgpxd4x" path="res://initialFiles/grunge.gdshader" id="2_jwy2y"]
 [ext_resource type="AudioStream" uid="uid://b4uwe3tf6qdxx" path="res://musicFiles/Kevin MacLeod - Digital Bark - (128 Kbps).mp3" id="4_qlwdj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hoxie"]
