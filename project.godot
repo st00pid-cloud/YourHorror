@@ -19,9 +19,8 @@ config/icon="res://icon.svg"
 
 GameCursor="*res://GameCursor.tscn"
 LevelManager="*res://addons/LevelManager.gd"
+DialogueManager="*res://dialogueInGame/text_in_game_ui.tscn"
 TaskManager="*res://taskLogic/TaskManager.gd"
-DialogueManager="*res://text_in_game_ui.tscn"
-TaskWindow="*res://taskLogic/TaskWindow.gd"
 
 [editor]
 

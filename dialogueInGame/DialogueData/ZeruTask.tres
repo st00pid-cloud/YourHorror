@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TaskData" load_steps=2 format=3 uid="uid://dq71i83hu0an6"]
+
+[ext_resource type="Script" uid="uid://dbq2ixum831ln" path="res://taskLogic/TaskData.gd" id="1_nfa3t"]
+
+[resource]
+script = ExtResource("1_nfa3t")
+task_id = " 010"
+task_name = "Find the Data Center"
+description = " Player has to look for the Data Center that they were tasked to survey. "
+metadata/_custom_type_script = "uid://dbq2ixum831ln"

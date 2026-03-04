@@ -147,7 +147,7 @@ func start_level_transition():
 	var fade_tween = create_tween()
 	fade_tween.tween_property(self, \"modulate:a\", 0.0, 1.0)
 	fade_tween.finished.connect(func():
-		get_tree().change_scene_to_file(\"res://levels/game_itself.tscn\")
+		get_tree().change_scene_to_file(\"res://levels/Level0.tscn\")
 	)
 func setup_choices(text: String): 
 	choice_container.show()
