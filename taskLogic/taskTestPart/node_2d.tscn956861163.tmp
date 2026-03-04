@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://bq5au478oxwp0"]
+
+[ext_resource type="Script" uid="uid://d327cuprqhd7n" path="res://taskLogic/taskTestPart/testArea2D.gd" id="1_hiksq"]
+[ext_resource type="Resource" uid="uid://i33dctbvy3fv" path="res://dialogueInGame/DialogueData/FirstTask.tres" id="2_kslcw"]
+[ext_resource type="Texture2D" uid="uid://8q4gtyjobe53" path="res://playerAssets/forNow.jpg" id="3_xvsdb"]
+[ext_resource type="Script" uid="uid://dlvu1c0bc2fsq" path="res://taskLogic/taskTestPart/taskTest.gd" id="4_uuk05"]
+[ext_resource type="Texture2D" uid="uid://b8pekynu8i413" path="res://worldAssets/cat.jpg" id="5_43q0e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0e48y"]
+radius = 109.40292
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
+radius = 120.33703
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_hiksq")
+dialogue_resource = ExtResource("2_kslcw")
+
+[node name="TextureRect" type="TextureRect" parent="Area2D"]
+offset_left = 433.0
+offset_top = 175.0
+offset_right = 657.0
+offset_bottom = 399.0
+scale = Vector2(1.4, 1.3000001)
+texture = ExtResource("3_xvsdb")
+stretch_mode = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(581, 314)
+shape = SubResource("CircleShape2D_0e48y")
+
+[node name="Area2D2" type="Area2D" parent="."]
+visible = false
+script = ExtResource("4_uuk05")
+
+[node name="TextureRect2" type="TextureRect" parent="Area2D2"]
+offset_left = 40.0
+offset_top = 133.0
+offset_right = 552.0
+offset_bottom = 645.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_43q0e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(286, 335)
+shape = SubResource("CircleShape2D_0hol4")

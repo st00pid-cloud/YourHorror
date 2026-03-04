@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://dqbsffve6o6co"]
+[gd_scene load_steps=32 format=4 uid="uid://dqbsffve6o6co"]
 
 [ext_resource type="PackedScene" uid="uid://ijd1bih8jfgd" path="res://initialFiles/lineFlicker.tscn" id="1_yye3l"]
 [ext_resource type="Texture2D" uid="uid://cv8f2xsfwfbuv" path="res://levels/texture.jpg" id="2_gnwoi"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://clp85rer3l6cw" path="res://worldAssets/Trees/Trees/Trees.fbx" id="10_aw8ge"]
 [ext_resource type="PackedScene" uid="uid://dkuyl21ojg81b" path="res://mainMenu/menu.tscn" id="11_6jwhj"]
 [ext_resource type="PackedScene" uid="uid://caglg4p0mqdyl" path="res://initialFiles/GameCursor.tscn" id="12_juwty"]
+[ext_resource type="PackedScene" uid="uid://bq5au478oxwp0" path="res://taskLogic/taskTestPart/networkEngineerDog.tscn" id="13_p1d1a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n105"]
 size = Vector3(350, 1, 350)
@@ -718,6 +719,8 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 [node name="menu" parent="OPTIONS_PART" instance=ExtResource("11_6jwhj")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("12_juwty")]
+
+[node name="Node2D" parent="." instance=ExtResource("13_p1d1a")]
 
 [editable path="floor/IndustrialHorror_PS_like"]
 [editable path="flesh"]

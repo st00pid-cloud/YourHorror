@@ -28,5 +28,4 @@ func _on_task_removed(task_id: String):
 		t.finished.connect(func(): 
 			label.queue_free()
 			task_nodes.erase(task_id)
-	
 )
