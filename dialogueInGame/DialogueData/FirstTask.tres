@@ -7,12 +7,12 @@
 script = ExtResource("1_oi08n")
 character_name = "Freaking Network Engineer Dog?"
 character_portrait = ExtResource("1_a4jad")
-lines = Array[String](
+lines = Array[String]([
     "Something's wrong with the connection. The light should be steady green, but it keeps flickering red.",
     "[] You're at the rack. The LED pulses like a warning hearthbeat.",
     "I'll have to pull the module.", 
     "[] Metal sliding, followed by a wet squelch.", 
     "[] The module is coated in a black, sticky gel. It clings like tar, not like anything you've seen before.",
     "I need to clean this before the whole system goes dark."
-    )
+    ])
 metadata/_custom_type_script = "uid://gu8ukt4kb2yf"

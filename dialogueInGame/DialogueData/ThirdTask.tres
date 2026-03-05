@@ -5,12 +5,12 @@
 [resource]
 script = ExtResource("1_ruf22")
 character_name = "[Uhhh] Refactor Muli Nakshi"
-lines = Array[String](
+lines = Array[String]([
     "[] You reach for the Main Distribution Frame. The Gateway router hums violently, its CPU meter spiking.", 
     " ... "
     "[] The cables don't sit in their ports. They're threaded through the rack like veins.", 
     " ... " 
     "[] Behind the cables, fused into the metal is a body."
-)
+])
 metadata/_custom_type_script = "uid://gu8ukt4kb2yf"
  

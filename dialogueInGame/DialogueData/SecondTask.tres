@@ -5,10 +5,10 @@
 [resource]
 script = ExtResource("1_bnnib")
 character_name = "[Have2Refactor]"
-lines = Array[String](
+lines = Array[String]([
     "[] You connect your laptop to the console port. The screen fills with strange symbols.", 
     "That's not normal data. It looks like the system is speaking in a language that it shouldn't",
     "[] The buffer fills rapidly, red bars climbing higher and higher.",
     "..."
-)
+])
 metadata/_custom_type_script = "uid://gu8ukt4kb2yf"
