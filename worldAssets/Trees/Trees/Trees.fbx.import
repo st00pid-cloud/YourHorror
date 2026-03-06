@@ -37,7 +37,34 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Tree": {
+"generate/physics": true
+},
+"PATH:Tree_1": {
+"generate/physics": true
+},
+"PATH:Tree_2": {
+"generate/physics": true
+},
+"PATH:Tree_3": {
+"generate/physics": true
+},
+"PATH:Tree_4": {
+"generate/physics": true
+},
+"PATH:Tree_5": {
+"generate/physics": true
+},
+"PATH:Tree_6": {
+"generate/physics": true
+},
+"PATH:Tree_7": {
+"generate/physics": true
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

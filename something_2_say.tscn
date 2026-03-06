@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxxfhuwkxjt3d"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wrsgh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kxtxk"]
+
+[node name="something2Say" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.39999998, 0, 0.5770917, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_wrsgh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_kxtxk")
+debug_color = Color(0.5882353, 0.91764706, 1, 1)

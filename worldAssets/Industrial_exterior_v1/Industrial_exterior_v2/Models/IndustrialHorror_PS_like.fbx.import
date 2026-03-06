@@ -37,7 +37,244 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Skeleton3D/Alphalt_Floor/Alphalt_Floor": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bags_1/Bags_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bags_2/Bags_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Barrel_1/Barrel_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Barrel_2/Barrel_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Barrel_3/Barrel_3": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Box_wide_wood/Box_wide_wood": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Box_wood/Box_wood": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_1/Bridges_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_2/Bridges_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_3/Bridges_3": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_end/Bridges_end": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_stairs_1/Bridges_stairs_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_stairs_2/Bridges_stairs_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_support_1/Bridges_support_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_support_2/Bridges_support_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_support_3/Bridges_support_3": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Bridges_turn/Bridges_turn": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_1/Building_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_10/Building_10": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_11/Building_11": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_12/Building_12": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_13/Building_13": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_2/Building_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_3/Building_3": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_4/Building_4": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_5/Building_5": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_6/Building_6": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_7/Building_7": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_8/Building_8": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Building_9/Building_9": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Cargo_1_close/Cargo_1_close": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Cargo_1_open/Cargo_1_open": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Cargo_2_empty/Cargo_2_empty": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Cargo_2_full/Cargo_2_full": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Concrete_miniwall_long/Concrete_miniwall_long": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Concrete_miniwall_short/Concrete_miniwall_short": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Concrete_stairs/Concrete_stairs": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Cooling_tower/Cooling_tower": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Fence/Fence": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Fence_corner/Fence_corner": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Fence_long/Fence_long": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Fence_short/Fence_short": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Generator/Generator": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Liquid_reservoir_1/Liquid_reservoir_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Liquid_reservoir_2/Liquid_reservoir_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Metal_cabinet_1/Metal_cabinet_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Metal_cabinet_2/Metal_cabinet_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Palet_single/Palet_single": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Palet_stack/Palet_stack": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_arch/Pipes_arch": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_horizontal_long/Pipes_horizontal_long": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_horizontal_short/Pipes_horizontal_short": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_horizontal_turn_1/Pipes_horizontal_turn_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_horizontal_turn_2/Pipes_horizontal_turn_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_out_1/Pipes_out_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_out_2/Pipes_out_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_support/Pipes_support": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_vertical_long/Pipes_vertical_long": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_vertical_short/Pipes_vertical_short": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Pipes_vertical_turn/Pipes_vertical_turn": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Road_curved/Road_curved": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Road_long/Road_long": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Road_short/Road_short": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Road_turn_1/Road_turn_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Road_turn_2/Road_turn_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Road_turn_3/Road_turn_3": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Roadblock/Roadblock": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Ventilation_1/Ventilation_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Ventilation_2/Ventilation_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Ventilation_2_blades/Ventilation_2_blades": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Ventilation_3/Ventilation_3": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Ventilation_3_blades/Ventilation_3_blades": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Wall/Wall": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Wall_column/Wall_column": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Wall_corner_1/Wall_corner_1": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Wall_corner_2/Wall_corner_2": {
+"generate/physics": true
+},
+"PATH:Skeleton3D/Wall_corner_3/Wall_corner_3": {
+"generate/physics": true
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1
