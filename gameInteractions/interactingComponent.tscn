@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://bb3ltdw4aotkq"]
+[gd_scene load_steps=3 format=3 uid="uid://bb3ltdw4aotkq"]
 
-[node name="Node3D" type="Node3D"]
+[ext_resource type="Script" uid="uid://buyhr48pqrrmw" path="res://gameInteractions/interacting_component.gd" id="1_af2fk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tagsk"]
+
+[node name="interactingComponent" type="Node3D"]
+script = ExtResource("1_af2fk")
+
+[node name="interactRange" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interactRange"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("BoxShape3D_tagsk")
+
+[node name="interactLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5999999, -2.2419262)
+layers = 2
+text = "[E] Interact"
+font_size = 50
+
+[connection signal="area_entered" from="interactRange" to="." method="_on_interact_range_area_entered"]
+[connection signal="area_exited" from="interactRange" to="." method="_on_interact_range_area_exited"]

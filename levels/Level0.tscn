@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://dqbsffve6o6co"]
+[gd_scene load_steps=70 format=4 uid="uid://dqbsffve6o6co"]
 
 [ext_resource type="Texture2D" uid="uid://cv8f2xsfwfbuv" path="res://levels/texture.jpg" id="2_gnwoi"]
 [ext_resource type="Texture2D" uid="uid://dl043rabiuy5p" path="res://worldAssets/Industrial_exterior_v1/Industrial_exterior_v2/Textures/Road.png" id="3_fli3c"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://f854crjaiadx" path="res://worldAssets/Trees/Trees/Branch_10.png" id="15_wssi3"]
 [ext_resource type="Texture2D" uid="uid://8rbmx43gb727" path="res://worldAssets/Trees/Trees/Wood_14.jpg" id="16_kc2to"]
 [ext_resource type="Texture2D" uid="uid://bn8kngkq3pqq0" path="res://worldAssets/Trees/Trees/Branch_13.png" id="16_skuna"]
+[ext_resource type="PackedScene" uid="uid://cxxfhuwkxjt3d" path="res://something_2_say.tscn" id="19_kc2to"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8n105"]
 size = Vector3(350, 1, 350)
@@ -1267,6 +1268,9 @@ target_position = Vector3(0, -1, -5)
 [node name="Tree_1" parent="Trees" index="2"]
 transform = Transform3D(45.52186, 89.037964, -9.094947e-13, 1.0614155e-05, -5.426628e-06, 99.99999, 89.03797, -45.521854, -1.1920929e-05, 68.23043, 0.30589765, -125.780525)
 
+[node name="Tree" parent="Trees" index="7"]
+transform = Transform3D(96.59258, -25.881903, 0, -3.0853637e-06, -1.1514733e-05, 99.99999, -25.881905, -96.592575, -1.1920929e-05, 60.735672, 0.042963557, -120.062485)
+
 [node name="Tree_10" type="MeshInstance3D" parent="Trees"]
 transform = Transform3D(133.20743, 30.770538, 5.8379605e-06, -4.3272066e-06, -3.0908616e-06, 150, 43.07876, -95.14816, -2.9847351e-06, 43.61636, 0.30589956, -134.14212)
 mesh = SubResource("ArrayMesh_ag8qp")
@@ -1308,9 +1312,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Trees/Tree_8/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_s6sj3")
-
-[node name="Tree" parent="Trees" index="11"]
-transform = Transform3D(96.59258, -25.881903, 0, -3.0853637e-06, -1.1514733e-05, 99.99999, -25.881905, -96.592575, -1.1920929e-05, 60.735672, 0.042963557, -120.062485)
 
 [node name="Tree3" type="MeshInstance3D" parent="Trees"]
 transform = Transform3D(119.999855, -0.15184593, -1.5838675e-06, 1.3499057e-06, -4.223909e-06, 140, -0.18221664, -99.999886, -5.9110744e-06, 35.200424, 0.04296234, -145.27197)
@@ -1361,6 +1362,9 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Trees/Tree5/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_swlhg")
+
+[node name="something2Say" parent="." instance=ExtResource("19_kc2to")]
+transform = Transform3D(0.8660254, 0, -0.19999996, 0, 1, 0, 0.49999994, 0, 0.34641013, 94.2941, 2.5770917, -43.17037)
 
 [editable path="floor/IndustrialHorror_PS_like"]
 [editable path="flesh"]

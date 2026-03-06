@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcpl721qe1lkp"]
+[gd_scene load_steps=7 format=3 uid="uid://bcpl721qe1lkp"]
 
 [ext_resource type="Script" uid="uid://dx6wtdnr23bup" path="res://playerAssets/player.gd" id="1_1v327"]
 [ext_resource type="PackedScene" uid="uid://kiwk32g16wts" path="res://playerAssets/new_edit.tscn" id="1_d5ulr"]
 [ext_resource type="Script" uid="uid://cw17miyxfxk5t" path="res://playerAssets/cam.gd" id="2_tt144"]
 [ext_resource type="Script" uid="uid://dm35ud4clapwu" path="res://playerAssets/camera_3d.gd" id="3_p41a3"]
+[ext_resource type="PackedScene" uid="uid://bb3ltdw4aotkq" path="res://gameInteractions/interactingComponent.tscn" id="5_if30j"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2nim2"]
 
@@ -38,3 +39,5 @@ offset_top = -2.0
 offset_right = 1153.0
 offset_bottom = 645.0
 size_flags_horizontal = 3
+
+[node name="interactingComponent" parent="." instance=ExtResource("5_if30j")]
